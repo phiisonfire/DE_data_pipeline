@@ -1,0 +1,71 @@
+[2023-03-23T15:41:25.506+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: asndjfsdf_v02.extract scheduled__2023-03-22T00:00:00+00:00 [queued]>
+[2023-03-23T15:41:25.527+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: asndjfsdf_v02.extract scheduled__2023-03-22T00:00:00+00:00 [queued]>
+[2023-03-23T15:41:25.528+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-23T15:41:25.528+0000] {taskinstance.py:1283} INFO - Starting attempt 2 of 6
+[2023-03-23T15:41:25.529+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-23T15:41:25.555+0000] {taskinstance.py:1303} INFO - Executing <Task(PythonOperator): extract> on 2023-03-22 00:00:00+00:00
+[2023-03-23T15:41:25.559+0000] {standard_task_runner.py:55} INFO - Started process 680 to run task
+[2023-03-23T15:41:25.562+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'asndjfsdf_v02', 'extract', 'scheduled__2023-03-22T00:00:00+00:00', '--job-id', '446', '--raw', '--subdir', 'DAGS_FOLDER/ashfjasdg.py', '--cfg-path', '/tmp/tmp0n_sp1j9']
+[2023-03-23T15:41:25.565+0000] {standard_task_runner.py:83} INFO - Job 446: Subtask extract
+[2023-03-23T15:41:25.655+0000] {task_command.py:388} INFO - Running <TaskInstance: asndjfsdf_v02.extract scheduled__2023-03-22T00:00:00+00:00 [running]> on host 7a7b82ed390a
+[2023-03-23T15:41:25.758+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Mr.Phi
+AIRFLOW_CTX_DAG_ID=asndjfsdf_v02
+AIRFLOW_CTX_TASK_ID=extract
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-22T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-22T00:00:00+00:00
+[2023-03-23T15:41:26.297+0000] {logging_mixin.py:137} INFO - 2023-03-23 15:41:26,297 INFO sqlalchemy.engine.Engine SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+[2023-03-23T15:41:26.297+0000] {log.py:128} INFO - SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+[2023-03-23T15:41:26.298+0000] {logging_mixin.py:137} INFO - 2023-03-23 15:41:26,298 INFO sqlalchemy.engine.Engine [raw sql] ()
+[2023-03-23T15:41:26.298+0000] {log.py:128} INFO - [raw sql] ()
+[2023-03-23T15:41:26.300+0000] {logging_mixin.py:137} INFO - 2023-03-23 15:41:26,300 INFO sqlalchemy.engine.Engine SELECT schema_name()
+[2023-03-23T15:41:26.300+0000] {log.py:128} INFO - SELECT schema_name()
+[2023-03-23T15:41:26.301+0000] {logging_mixin.py:137} INFO - 2023-03-23 15:41:26,301 INFO sqlalchemy.engine.Engine [generated in 0.00087s] ()
+[2023-03-23T15:41:26.301+0000] {log.py:128} INFO - [generated in 0.00087s] ()
+[2023-03-23T15:41:26.316+0000] {logging_mixin.py:137} INFO - 2023-03-23 15:41:26,316 INFO sqlalchemy.engine.Engine SELECT CAST('test max support' AS NVARCHAR(max))
+[2023-03-23T15:41:26.316+0000] {log.py:128} INFO - SELECT CAST('test max support' AS NVARCHAR(max))
+[2023-03-23T15:41:26.317+0000] {logging_mixin.py:137} INFO - 2023-03-23 15:41:26,317 INFO sqlalchemy.engine.Engine [generated in 0.00102s] ()
+[2023-03-23T15:41:26.317+0000] {log.py:128} INFO - [generated in 0.00102s] ()
+[2023-03-23T15:41:26.324+0000] {logging_mixin.py:137} INFO - 2023-03-23 15:41:26,323 INFO sqlalchemy.engine.Engine SELECT [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME] 
+FROM [INFORMATION_SCHEMA].[TABLES] 
+WHERE [INFORMATION_SCHEMA].[TABLES].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[TABLES].[TABLE_TYPE] = CAST(? AS NVARCHAR(max)) ORDER BY [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME]
+[2023-03-23T15:41:26.323+0000] {log.py:128} INFO - SELECT [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME] 
+FROM [INFORMATION_SCHEMA].[TABLES] 
+WHERE [INFORMATION_SCHEMA].[TABLES].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[TABLES].[TABLE_TYPE] = CAST(? AS NVARCHAR(max)) ORDER BY [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME]
+[2023-03-23T15:41:26.325+0000] {logging_mixin.py:137} INFO - 2023-03-23 15:41:26,324 INFO sqlalchemy.engine.Engine [generated in 0.00110s] ('dbo', 'BASE TABLE')
+[2023-03-23T15:41:26.324+0000] {log.py:128} INFO - [generated in 0.00110s] ('dbo', 'BASE TABLE')
+[2023-03-23T15:41:26.347+0000] {logging_mixin.py:137} INFO - 2023-03-23 15:41:26,347 INFO sqlalchemy.engine.Engine SELECT [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME] 
+FROM [INFORMATION_SCHEMA].[TABLES] 
+WHERE [INFORMATION_SCHEMA].[TABLES].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[TABLES].[TABLE_TYPE] = CAST(? AS NVARCHAR(max)) ORDER BY [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME]
+[2023-03-23T15:41:26.347+0000] {log.py:128} INFO - SELECT [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME] 
+FROM [INFORMATION_SCHEMA].[TABLES] 
+WHERE [INFORMATION_SCHEMA].[TABLES].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[TABLES].[TABLE_TYPE] = CAST(? AS NVARCHAR(max)) ORDER BY [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME]
+[2023-03-23T15:41:26.348+0000] {logging_mixin.py:137} INFO - 2023-03-23 15:41:26,348 INFO sqlalchemy.engine.Engine [cached since 0.02469s ago] ('dbo', 'VIEW')
+[2023-03-23T15:41:26.348+0000] {log.py:128} INFO - [cached since 0.02469s ago] ('dbo', 'VIEW')
+[2023-03-23T15:41:26.365+0000] {taskinstance.py:1775} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 320, in read_sql_table
+    meta.reflect(only=[table_name], views=True)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/schema.py", line 4891, in reflect
+    "in %r%s: (%s)" % (bind.engine, s, ", ".join(missing))
+sqlalchemy.exc.InvalidRequestError: Could not reflect: requested table(s) not available in Engine(mssql+pyodbc://sa:***@host.docker.internal:1433/DE_Data_Lake?driver=ODBC+Driver+17+for+SQL+Server): (jobs_v04)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ashfjasdg.py", line 32, in extract
+    df = pd.read_sql_table('jobs_v04', engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 322, in read_sql_table
+    raise ValueError(f"Table {table_name} not found") from err
+ValueError: Table jobs_v04 not found
+[2023-03-23T15:41:26.379+0000] {taskinstance.py:1326} INFO - Marking task as UP_FOR_RETRY. dag_id=asndjfsdf_v02, task_id=extract, execution_date=20230322T000000, start_date=20230323T154125, end_date=20230323T154126
+[2023-03-23T15:41:26.395+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 446 for task extract (Table jobs_v04 not found; 680)
+[2023-03-23T15:41:26.417+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-03-23T15:41:26.436+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

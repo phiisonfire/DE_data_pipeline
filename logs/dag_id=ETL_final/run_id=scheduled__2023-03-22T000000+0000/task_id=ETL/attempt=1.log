@@ -1,0 +1,355 @@
+[2023-03-23T16:18:23.702+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_final.ETL scheduled__2023-03-22T00:00:00+00:00 [queued]>
+[2023-03-23T16:18:23.715+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_final.ETL scheduled__2023-03-22T00:00:00+00:00 [queued]>
+[2023-03-23T16:18:23.715+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-23T16:18:23.716+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 6
+[2023-03-23T16:18:23.717+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-23T16:18:23.737+0000] {taskinstance.py:1303} INFO - Executing <Task(PythonOperator): ETL> on 2023-03-22 00:00:00+00:00
+[2023-03-23T16:18:23.745+0000] {standard_task_runner.py:55} INFO - Started process 1249 to run task
+[2023-03-23T16:18:23.748+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ETL_final', 'ETL', 'scheduled__2023-03-22T00:00:00+00:00', '--job-id', '462', '--raw', '--subdir', 'DAGS_FOLDER/DE_ETL.py', '--cfg-path', '/tmp/tmpuq3pfk_z']
+[2023-03-23T16:18:23.750+0000] {standard_task_runner.py:83} INFO - Job 462: Subtask ETL
+[2023-03-23T16:18:23.831+0000] {task_command.py:388} INFO - Running <TaskInstance: ETL_final.ETL scheduled__2023-03-22T00:00:00+00:00 [running]> on host 7a7b82ed390a
+[2023-03-23T16:18:23.921+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Mr.Phi
+AIRFLOW_CTX_DAG_ID=ETL_final
+AIRFLOW_CTX_TASK_ID=ETL
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-22T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-22T00:00:00+00:00
+[2023-03-23T16:18:24.719+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:24,719 INFO sqlalchemy.engine.Engine SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+[2023-03-23T16:18:24.719+0000] {log.py:128} INFO - SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+[2023-03-23T16:18:24.720+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:24,720 INFO sqlalchemy.engine.Engine [raw sql] ()
+[2023-03-23T16:18:24.720+0000] {log.py:128} INFO - [raw sql] ()
+[2023-03-23T16:18:24.724+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:24,724 INFO sqlalchemy.engine.Engine SELECT schema_name()
+[2023-03-23T16:18:24.724+0000] {log.py:128} INFO - SELECT schema_name()
+[2023-03-23T16:18:24.725+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:24,725 INFO sqlalchemy.engine.Engine [generated in 0.00109s] ()
+[2023-03-23T16:18:24.725+0000] {log.py:128} INFO - [generated in 0.00109s] ()
+[2023-03-23T16:18:24.730+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:24,730 INFO sqlalchemy.engine.Engine SELECT CAST('test max support' AS NVARCHAR(max))
+[2023-03-23T16:18:24.730+0000] {log.py:128} INFO - SELECT CAST('test max support' AS NVARCHAR(max))
+[2023-03-23T16:18:24.731+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:24,731 INFO sqlalchemy.engine.Engine [generated in 0.00097s] ()
+[2023-03-23T16:18:24.731+0000] {log.py:128} INFO - [generated in 0.00097s] ()
+[2023-03-23T16:18:24.738+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:24,738 INFO sqlalchemy.engine.Engine SELECT [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME] 
+FROM [INFORMATION_SCHEMA].[TABLES] 
+WHERE [INFORMATION_SCHEMA].[TABLES].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[TABLES].[TABLE_TYPE] = CAST(? AS NVARCHAR(max)) ORDER BY [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME]
+[2023-03-23T16:18:24.738+0000] {log.py:128} INFO - SELECT [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME] 
+FROM [INFORMATION_SCHEMA].[TABLES] 
+WHERE [INFORMATION_SCHEMA].[TABLES].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[TABLES].[TABLE_TYPE] = CAST(? AS NVARCHAR(max)) ORDER BY [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME]
+[2023-03-23T16:18:24.738+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:24,738 INFO sqlalchemy.engine.Engine [generated in 0.00098s] ('dbo', 'BASE TABLE')
+[2023-03-23T16:18:24.738+0000] {log.py:128} INFO - [generated in 0.00098s] ('dbo', 'BASE TABLE')
+[2023-03-23T16:18:24.747+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:24,747 INFO sqlalchemy.engine.Engine SELECT [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME] 
+FROM [INFORMATION_SCHEMA].[TABLES] 
+WHERE [INFORMATION_SCHEMA].[TABLES].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[TABLES].[TABLE_TYPE] = CAST(? AS NVARCHAR(max)) ORDER BY [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME]
+[2023-03-23T16:18:24.747+0000] {log.py:128} INFO - SELECT [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME] 
+FROM [INFORMATION_SCHEMA].[TABLES] 
+WHERE [INFORMATION_SCHEMA].[TABLES].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[TABLES].[TABLE_TYPE] = CAST(? AS NVARCHAR(max)) ORDER BY [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME]
+[2023-03-23T16:18:24.748+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:24,748 INFO sqlalchemy.engine.Engine [cached since 0.01039s ago] ('dbo', 'VIEW')
+[2023-03-23T16:18:24.748+0000] {log.py:128} INFO - [cached since 0.01039s ago] ('dbo', 'VIEW')
+[2023-03-23T16:18:24.764+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:24,764 INFO sqlalchemy.engine.Engine SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME], sys.computed_columns.definition, sys.computed_columns.is_persisted, sys.identity_columns.is_identity, CAST(sys.identity_columns.seed_value AS NUMERIC) AS seed_value, CAST(sys.identity_columns.increment_value AS NUMERIC) AS increment_value 
+FROM [INFORMATION_SCHEMA].[COLUMNS] LEFT OUTER JOIN sys.computed_columns ON sys.computed_columns.object_id = object_id([INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] + CAST(? AS NVARCHAR(max)) + [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME]) AND sys.computed_columns.name = ([INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME] COLLATE DATABASE_DEFAULT) LEFT OUTER JOIN sys.identity_columns ON sys.identity_columns.object_id = object_id([INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] + CAST(? AS NVARCHAR(max)) + [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME]) AND sys.identity_columns.name = ([INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME] COLLATE DATABASE_DEFAULT) 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max)) ORDER BY [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION]
+[2023-03-23T16:18:24.764+0000] {log.py:128} INFO - SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME], sys.computed_columns.definition, sys.computed_columns.is_persisted, sys.identity_columns.is_identity, CAST(sys.identity_columns.seed_value AS NUMERIC) AS seed_value, CAST(sys.identity_columns.increment_value AS NUMERIC) AS increment_value 
+FROM [INFORMATION_SCHEMA].[COLUMNS] LEFT OUTER JOIN sys.computed_columns ON sys.computed_columns.object_id = object_id([INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] + CAST(? AS NVARCHAR(max)) + [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME]) AND sys.computed_columns.name = ([INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME] COLLATE DATABASE_DEFAULT) LEFT OUTER JOIN sys.identity_columns ON sys.identity_columns.object_id = object_id([INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] + CAST(? AS NVARCHAR(max)) + [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME]) AND sys.identity_columns.name = ([INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME] COLLATE DATABASE_DEFAULT) 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max)) ORDER BY [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION]
+[2023-03-23T16:18:24.765+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:24,765 INFO sqlalchemy.engine.Engine [generated in 0.00107s] ('.', '.', 'jobs_v03', 'dbo')
+[2023-03-23T16:18:24.765+0000] {log.py:128} INFO - [generated in 0.00107s] ('.', '.', 'jobs_v03', 'dbo')
+[2023-03-23T16:18:24.779+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:24,779 INFO sqlalchemy.engine.Engine SELECT [C].[COLUMN_NAME], [INFORMATION_SCHEMA].[TABLE_CONSTRAINTS].[CONSTRAINT_TYPE], [C].[CONSTRAINT_NAME] 
+FROM [INFORMATION_SCHEMA].[KEY_COLUMN_USAGE] AS [C], [INFORMATION_SCHEMA].[TABLE_CONSTRAINTS] 
+WHERE [INFORMATION_SCHEMA].[TABLE_CONSTRAINTS].[CONSTRAINT_NAME] = [C].[CONSTRAINT_NAME] AND [INFORMATION_SCHEMA].[TABLE_CONSTRAINTS].[TABLE_SCHEMA] = [C].[TABLE_SCHEMA] AND [C].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [C].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max)) ORDER BY [INFORMATION_SCHEMA].[TABLE_CONSTRAINTS].[CONSTRAINT_NAME], [C].[ORDINAL_POSITION]
+[2023-03-23T16:18:24.779+0000] {log.py:128} INFO - SELECT [C].[COLUMN_NAME], [INFORMATION_SCHEMA].[TABLE_CONSTRAINTS].[CONSTRAINT_TYPE], [C].[CONSTRAINT_NAME] 
+FROM [INFORMATION_SCHEMA].[KEY_COLUMN_USAGE] AS [C], [INFORMATION_SCHEMA].[TABLE_CONSTRAINTS] 
+WHERE [INFORMATION_SCHEMA].[TABLE_CONSTRAINTS].[CONSTRAINT_NAME] = [C].[CONSTRAINT_NAME] AND [INFORMATION_SCHEMA].[TABLE_CONSTRAINTS].[TABLE_SCHEMA] = [C].[TABLE_SCHEMA] AND [C].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [C].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max)) ORDER BY [INFORMATION_SCHEMA].[TABLE_CONSTRAINTS].[CONSTRAINT_NAME], [C].[ORDINAL_POSITION]
+[2023-03-23T16:18:24.781+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:24,780 INFO sqlalchemy.engine.Engine [generated in 0.00125s] ('jobs_v03', 'dbo')
+[2023-03-23T16:18:24.780+0000] {log.py:128} INFO - [generated in 0.00125s] ('jobs_v03', 'dbo')
+[2023-03-23T16:18:24.789+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:24,789 INFO sqlalchemy.engine.Engine WITH fk_info AS (
+    SELECT
+        ischema_ref_con.constraint_schema,
+        ischema_ref_con.constraint_name,
+        ischema_key_col.ordinal_position,
+        ischema_key_col.table_schema,
+        ischema_key_col.table_name,
+        ischema_ref_con.unique_constraint_schema,
+        ischema_ref_con.unique_constraint_name,
+        ischema_ref_con.match_option,
+        ischema_ref_con.update_rule,
+        ischema_ref_con.delete_rule,
+        ischema_key_col.column_name AS constrained_column
+    FROM
+        INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS ischema_ref_con
+        INNER JOIN
+        INFORMATION_SCHEMA.KEY_COLUMN_USAGE ischema_key_col ON
+            ischema_key_col.table_schema = ischema_ref_con.constraint_schema
+            AND ischema_key_col.constraint_name =
+            ischema_ref_con.constraint_name
+    WHERE ischema_key_col.table_name = CAST(? AS NVARCHAR(max))
+        AND ischema_key_col.table_schema = CAST(? AS NVARCHAR(max))
+),
+constraint_info AS (
+    SELECT
+        ischema_key_col.constraint_schema,
+        ischema_key_col.constraint_name,
+        ischema_key_col.ordinal_position,
+        ischema_key_col.table_schema,
+        ischema_key_col.table_name,
+        ischema_key_col.column_name
+    FROM
+        INFORMATION_SCHEMA.KEY_COLUMN_USAGE ischema_key_col
+),
+index_info AS (
+    SELECT
+        sys.schemas.name AS index_schema,
+        sys.indexes.name AS index_name,
+        sys.index_columns.key_ordinal AS ordinal_position,
+        sys.schemas.name AS table_schema,
+        sys.objects.name AS table_name,
+        sys.columns.name AS column_name
+    FROM
+        sys.indexes
+        INNER JOIN
+        sys.objects ON
+            sys.objects.object_id = sys.indexes.object_id
+        INNER JOIN
+        sys.schemas ON
+            sys.schemas.schema_id = sys.objects.schema_id
+        INNER JOIN
+        sys.index_columns ON
+            sys.index_columns.object_id = sys.objects.object_id
+            AND sys.index_columns.index_id = sys.indexes.index_id
+        INNER JOIN
+        sys.columns ON
+            sys.columns.object_id = sys.indexes.object_id
+            AND sys.columns.column_id = sys.index_columns.column_id
+)
+    SELECT
+        fk_info.constraint_schema,
+        fk_info.constraint_name,
+        fk_info.ordinal_position,
+        fk_info.constrained_column,
+        constraint_info.table_schema AS referred_table_schema,
+        constraint_info.table_name AS referred_table_name,
+        constraint_info.column_name AS referred_column,
+        fk_info.match_option,
+        fk_info.update_rule,
+        fk_info.delete_rule
+    FROM
+        fk_info INNER JOIN constraint_info ON
+            constraint_info.constraint_schema =
+                fk_info.unique_constraint_schema
+            AND constraint_info.constraint_name =
+                fk_info.unique_constraint_name
+            AND constraint_info.ordinal_position = fk_info.ordinal_position
+    UNION
+    SELECT
+        fk_info.constraint_schema,
+        fk_info.constraint_name,
+        fk_info.ordinal_position,
+        fk_info.constrained_column,
+        index_info.table_schema AS referred_table_schema,
+        index_info.table_name AS referred_table_name,
+        index_info.column_name AS referred_column,
+        fk_info.match_option,
+        fk_info.update_rule,
+        fk_info.delete_rule
+    FROM
+        fk_info INNER JOIN index_info ON
+            index_info.index_schema = fk_info.unique_constraint_schema
+            AND index_info.index_name = fk_info.unique_constraint_name
+            AND index_info.ordinal_position = fk_info.ordinal_position
+
+    ORDER BY fk_info.constraint_schema, fk_info.constraint_name,
+        fk_info.ordinal_position
+[2023-03-23T16:18:24.789+0000] {log.py:128} INFO - WITH fk_info AS (
+    SELECT
+        ischema_ref_con.constraint_schema,
+        ischema_ref_con.constraint_name,
+        ischema_key_col.ordinal_position,
+        ischema_key_col.table_schema,
+        ischema_key_col.table_name,
+        ischema_ref_con.unique_constraint_schema,
+        ischema_ref_con.unique_constraint_name,
+        ischema_ref_con.match_option,
+        ischema_ref_con.update_rule,
+        ischema_ref_con.delete_rule,
+        ischema_key_col.column_name AS constrained_column
+    FROM
+        INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS ischema_ref_con
+        INNER JOIN
+        INFORMATION_SCHEMA.KEY_COLUMN_USAGE ischema_key_col ON
+            ischema_key_col.table_schema = ischema_ref_con.constraint_schema
+            AND ischema_key_col.constraint_name =
+            ischema_ref_con.constraint_name
+    WHERE ischema_key_col.table_name = CAST(? AS NVARCHAR(max))
+        AND ischema_key_col.table_schema = CAST(? AS NVARCHAR(max))
+),
+constraint_info AS (
+    SELECT
+        ischema_key_col.constraint_schema,
+        ischema_key_col.constraint_name,
+        ischema_key_col.ordinal_position,
+        ischema_key_col.table_schema,
+        ischema_key_col.table_name,
+        ischema_key_col.column_name
+    FROM
+        INFORMATION_SCHEMA.KEY_COLUMN_USAGE ischema_key_col
+),
+index_info AS (
+    SELECT
+        sys.schemas.name AS index_schema,
+        sys.indexes.name AS index_name,
+        sys.index_columns.key_ordinal AS ordinal_position,
+        sys.schemas.name AS table_schema,
+        sys.objects.name AS table_name,
+        sys.columns.name AS column_name
+    FROM
+        sys.indexes
+        INNER JOIN
+        sys.objects ON
+            sys.objects.object_id = sys.indexes.object_id
+        INNER JOIN
+        sys.schemas ON
+            sys.schemas.schema_id = sys.objects.schema_id
+        INNER JOIN
+        sys.index_columns ON
+            sys.index_columns.object_id = sys.objects.object_id
+            AND sys.index_columns.index_id = sys.indexes.index_id
+        INNER JOIN
+        sys.columns ON
+            sys.columns.object_id = sys.indexes.object_id
+            AND sys.columns.column_id = sys.index_columns.column_id
+)
+    SELECT
+        fk_info.constraint_schema,
+        fk_info.constraint_name,
+        fk_info.ordinal_position,
+        fk_info.constrained_column,
+        constraint_info.table_schema AS referred_table_schema,
+        constraint_info.table_name AS referred_table_name,
+        constraint_info.column_name AS referred_column,
+        fk_info.match_option,
+        fk_info.update_rule,
+        fk_info.delete_rule
+    FROM
+        fk_info INNER JOIN constraint_info ON
+            constraint_info.constraint_schema =
+                fk_info.unique_constraint_schema
+            AND constraint_info.constraint_name =
+                fk_info.unique_constraint_name
+            AND constraint_info.ordinal_position = fk_info.ordinal_position
+    UNION
+    SELECT
+        fk_info.constraint_schema,
+        fk_info.constraint_name,
+        fk_info.ordinal_position,
+        fk_info.constrained_column,
+        index_info.table_schema AS referred_table_schema,
+        index_info.table_name AS referred_table_name,
+        index_info.column_name AS referred_column,
+        fk_info.match_option,
+        fk_info.update_rule,
+        fk_info.delete_rule
+    FROM
+        fk_info INNER JOIN index_info ON
+            index_info.index_schema = fk_info.unique_constraint_schema
+            AND index_info.index_name = fk_info.unique_constraint_name
+            AND index_info.ordinal_position = fk_info.ordinal_position
+
+    ORDER BY fk_info.constraint_schema, fk_info.constraint_name,
+        fk_info.ordinal_position
+
+[2023-03-23T16:18:24.790+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:24,790 INFO sqlalchemy.engine.Engine [generated in 0.00116s] ('jobs_v03', 'dbo')
+[2023-03-23T16:18:24.790+0000] {log.py:128} INFO - [generated in 0.00116s] ('jobs_v03', 'dbo')
+[2023-03-23T16:18:24.798+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:24,798 INFO sqlalchemy.engine.Engine select ind.index_id, ind.is_unique, ind.name, ind.filter_definition from sys.indexes as ind join sys.tables as tab on ind.object_id=tab.object_id join sys.schemas as sch on sch.schema_id=tab.schema_id where tab.name = CAST(? AS NVARCHAR(max)) and sch.name=CAST(? AS NVARCHAR(max)) and ind.is_primary_key=0 and ind.type != 0
+[2023-03-23T16:18:24.798+0000] {log.py:128} INFO - select ind.index_id, ind.is_unique, ind.name, ind.filter_definition from sys.indexes as ind join sys.tables as tab on ind.object_id=tab.object_id join sys.schemas as sch on sch.schema_id=tab.schema_id where tab.name = CAST(? AS NVARCHAR(max)) and sch.name=CAST(? AS NVARCHAR(max)) and ind.is_primary_key=0 and ind.type != 0
+[2023-03-23T16:18:24.799+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:24,799 INFO sqlalchemy.engine.Engine [generated in 0.00099s] ('jobs_v03', 'dbo')
+[2023-03-23T16:18:24.799+0000] {log.py:128} INFO - [generated in 0.00099s] ('jobs_v03', 'dbo')
+[2023-03-23T16:18:24.805+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:24,805 INFO sqlalchemy.engine.Engine select ind_col.index_id, ind_col.object_id, col.name, ind_col.is_included_column from sys.columns as col join sys.tables as tab on tab.object_id=col.object_id join sys.index_columns as ind_col on (ind_col.column_id=col.column_id and ind_col.object_id=tab.object_id) join sys.schemas as sch on sch.schema_id=tab.schema_id where tab.name=CAST(? AS NVARCHAR(max)) and sch.name=CAST(? AS NVARCHAR(max))
+[2023-03-23T16:18:24.805+0000] {log.py:128} INFO - select ind_col.index_id, ind_col.object_id, col.name, ind_col.is_included_column from sys.columns as col join sys.tables as tab on tab.object_id=col.object_id join sys.index_columns as ind_col on (ind_col.column_id=col.column_id and ind_col.object_id=tab.object_id) join sys.schemas as sch on sch.schema_id=tab.schema_id where tab.name=CAST(? AS NVARCHAR(max)) and sch.name=CAST(? AS NVARCHAR(max))
+[2023-03-23T16:18:24.806+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:24,806 INFO sqlalchemy.engine.Engine [generated in 0.00098s] ('jobs_v03', 'dbo')
+[2023-03-23T16:18:24.806+0000] {log.py:128} INFO - [generated in 0.00098s] ('jobs_v03', 'dbo')
+[2023-03-23T16:18:24.815+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:24,815 INFO sqlalchemy.engine.Engine SELECT jobs_v03.id, jobs_v03.query, jobs_v03.job_url, jobs_v03.title, jobs_v03.tags, jobs_v03.address, jobs_v03.at, jobs_v03.last_post, jobs_v03.reason, jobs_v03.description, jobs_v03.skill, jobs_v03.why_work, jobs_v03.salary, jobs_v03.company_url, jobs_v03.company_name, jobs_v03.company_type, jobs_v03.company_people, jobs_v03.company_working_day, jobs_v03.company_ot, jobs_v03.company_nation 
+FROM jobs_v03
+[2023-03-23T16:18:24.815+0000] {log.py:128} INFO - SELECT jobs_v03.id, jobs_v03.query, jobs_v03.job_url, jobs_v03.title, jobs_v03.tags, jobs_v03.address, jobs_v03.at, jobs_v03.last_post, jobs_v03.reason, jobs_v03.description, jobs_v03.skill, jobs_v03.why_work, jobs_v03.salary, jobs_v03.company_url, jobs_v03.company_name, jobs_v03.company_type, jobs_v03.company_people, jobs_v03.company_working_day, jobs_v03.company_ot, jobs_v03.company_nation 
+FROM jobs_v03
+[2023-03-23T16:18:24.816+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:24,816 INFO sqlalchemy.engine.Engine [generated in 0.00101s] ()
+[2023-03-23T16:18:24.816+0000] {log.py:128} INFO - [generated in 0.00101s] ()
+[2023-03-23T16:18:25.112+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:25,112 INFO sqlalchemy.engine.Engine SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+[2023-03-23T16:18:25.112+0000] {log.py:128} INFO - SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+[2023-03-23T16:18:25.113+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:25,113 INFO sqlalchemy.engine.Engine [raw sql] ()
+[2023-03-23T16:18:25.113+0000] {log.py:128} INFO - [raw sql] ()
+[2023-03-23T16:18:25.116+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:25,116 INFO sqlalchemy.engine.Engine SELECT schema_name()
+[2023-03-23T16:18:25.116+0000] {log.py:128} INFO - SELECT schema_name()
+[2023-03-23T16:18:25.117+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:25,117 INFO sqlalchemy.engine.Engine [generated in 0.00096s] ()
+[2023-03-23T16:18:25.117+0000] {log.py:128} INFO - [generated in 0.00096s] ()
+[2023-03-23T16:18:25.123+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:25,123 INFO sqlalchemy.engine.Engine SELECT CAST('test max support' AS NVARCHAR(max))
+[2023-03-23T16:18:25.123+0000] {log.py:128} INFO - SELECT CAST('test max support' AS NVARCHAR(max))
+[2023-03-23T16:18:25.124+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:25,124 INFO sqlalchemy.engine.Engine [generated in 0.00114s] ()
+[2023-03-23T16:18:25.124+0000] {log.py:128} INFO - [generated in 0.00114s] ()
+[2023-03-23T16:18:25.128+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:25,127 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+[2023-03-23T16:18:25.127+0000] {log.py:128} INFO - BEGIN (implicit)
+[2023-03-23T16:18:25.130+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:25,130 INFO sqlalchemy.engine.Engine SELECT [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME], [INFORMATION_SCHEMA].[TABLES].[TABLE_TYPE] 
+FROM [INFORMATION_SCHEMA].[TABLES] 
+WHERE [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[TABLES].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+[2023-03-23T16:18:25.130+0000] {log.py:128} INFO - SELECT [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME], [INFORMATION_SCHEMA].[TABLES].[TABLE_TYPE] 
+FROM [INFORMATION_SCHEMA].[TABLES] 
+WHERE [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[TABLES].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+[2023-03-23T16:18:25.131+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:25,131 INFO sqlalchemy.engine.Engine [generated in 0.00101s] ('job_df', 'dbo')
+[2023-03-23T16:18:25.131+0000] {log.py:128} INFO - [generated in 0.00101s] ('job_df', 'dbo')
+[2023-03-23T16:18:25.135+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:25,135 INFO sqlalchemy.engine.Engine SELECT [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME], [INFORMATION_SCHEMA].[TABLES].[TABLE_TYPE] 
+FROM [INFORMATION_SCHEMA].[TABLES] 
+WHERE [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[TABLES].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+[2023-03-23T16:18:25.135+0000] {log.py:128} INFO - SELECT [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME], [INFORMATION_SCHEMA].[TABLES].[TABLE_TYPE] 
+FROM [INFORMATION_SCHEMA].[TABLES] 
+WHERE [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[TABLES].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+[2023-03-23T16:18:25.136+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:25,136 INFO sqlalchemy.engine.Engine [cached since 0.006096s ago] ('company_df', 'dbo')
+[2023-03-23T16:18:25.136+0000] {log.py:128} INFO - [cached since 0.006096s ago] ('company_df', 'dbo')
+[2023-03-23T16:18:25.140+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:25,139 INFO sqlalchemy.engine.Engine COMMIT
+[2023-03-23T16:18:25.139+0000] {log.py:128} INFO - COMMIT
+[2023-03-23T16:18:25.142+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:25,142 INFO sqlalchemy.engine.Engine SELECT job_url FROM job_df
+[2023-03-23T16:18:25.142+0000] {log.py:128} INFO - SELECT job_url FROM job_df
+[2023-03-23T16:18:25.143+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:25,143 INFO sqlalchemy.engine.Engine [raw sql] ()
+[2023-03-23T16:18:25.143+0000] {log.py:128} INFO - [raw sql] ()
+[2023-03-23T16:18:25.153+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:25,153 INFO sqlalchemy.engine.Engine SELECT company_name FROM company_df
+[2023-03-23T16:18:25.153+0000] {log.py:128} INFO - SELECT company_name FROM company_df
+[2023-03-23T16:18:25.155+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:25,155 INFO sqlalchemy.engine.Engine [raw sql] ()
+[2023-03-23T16:18:25.155+0000] {log.py:128} INFO - [raw sql] ()
+[2023-03-23T16:18:25.164+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:25,163 INFO sqlalchemy.engine.Engine SELECT TOP 1 id FROM job_df ORDER BY id DESC
+[2023-03-23T16:18:25.163+0000] {log.py:128} INFO - SELECT TOP 1 id FROM job_df ORDER BY id DESC
+[2023-03-23T16:18:25.165+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:25,165 INFO sqlalchemy.engine.Engine [raw sql] ()
+[2023-03-23T16:18:25.165+0000] {log.py:128} INFO - [raw sql] ()
+[2023-03-23T16:18:25.174+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:25,174 INFO sqlalchemy.engine.Engine SELECT TOP 1 company_id FROM company_df ORDER BY company_id DESC
+[2023-03-23T16:18:25.174+0000] {log.py:128} INFO - SELECT TOP 1 company_id FROM company_df ORDER BY company_id DESC
+[2023-03-23T16:18:25.176+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:25,176 INFO sqlalchemy.engine.Engine [raw sql] ()
+[2023-03-23T16:18:25.176+0000] {log.py:128} INFO - [raw sql] ()
+[2023-03-23T16:18:25.980+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:25,980 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+[2023-03-23T16:18:25.980+0000] {log.py:128} INFO - BEGIN (implicit)
+[2023-03-23T16:18:25.995+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:25,995 INFO sqlalchemy.engine.Engine SET IDENTITY_INSERT company_df ON
+[2023-03-23T16:18:25.995+0000] {log.py:128} INFO - SET IDENTITY_INSERT company_df ON
+[2023-03-23T16:18:25.996+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:25,996 INFO sqlalchemy.engine.Engine [raw sql] ()
+[2023-03-23T16:18:25.996+0000] {log.py:128} INFO - [raw sql] ()
+[2023-03-23T16:18:25.999+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:25,999 INFO sqlalchemy.engine.Engine INSERT INTO company_df (company_id, company_name, company_type, company_people, company_working_day, company_ot, company_nation) VALUES (?, ?, ?, ?, ?, ?, ?)
+[2023-03-23T16:18:25.999+0000] {log.py:128} INFO - INSERT INTO company_df (company_id, company_name, company_type, company_people, company_working_day, company_ot, company_nation) VALUES (?, ?, ?, ?, ?, ?, ?)
+[2023-03-23T16:18:26.000+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:26,000 INFO sqlalchemy.engine.Engine [generated in 0.00893s] ((1, 'Chotot', 'Product', '151-300', 'Monday - Friday', 'No OT', 'Singapore'), (2, 'Panasonic Vietnam Group – Panasonic R&D Center Vietnam (PRDCV)', 'Outsourcing', '51-150', 'Monday - Friday', 'Extra salary for OT', 'Japan'), (3, 'Cinnamon AI Labs', 'Product', '151-300', 'Monday - Friday', 'Extra salary for OT', 'Japan'), (4, 'DAT Technologies', 'Product', '51-150', 'Monday - Friday', 'No OT', 'Vietnam'), (7, 'Viettel Group', 'Product', '1000+', 'Monday - Friday', 'nan', 'Vietnam'), (9, 'VINBRAIN', 'Product', '51-150', 'Monday - Friday', 'No OT', 'Vietnam'), (10, 'KILALA Communication', 'Product', '1-50', 'Monday - Friday', 'No OT', 'Japan'), (11, 'BAEMIN Vietnam (Woowa Bros.)', 'Product', '301-500', 'Monday - Friday', 'No OT', 'South Korea')  ... displaying 10 of 319 total bound parameter sets ...  (461, 'Techcom Securities', 'Product', '151-300', 'Monday - Saturday', 'No OT', 'Vietnam'), (462, 'EVENT MEDICAL', 'Product', '1-50', 'Monday - Friday', 'No OT', 'United States'))
+[2023-03-23T16:18:26.000+0000] {log.py:128} INFO - [generated in 0.00893s] ((1, 'Chotot', 'Product', '151-300', 'Monday - Friday', 'No OT', 'Singapore'), (2, 'Panasonic Vietnam Group – Panasonic R&D Center Vietnam (PRDCV)', 'Outsourcing', '51-150', 'Monday - Friday', 'Extra salary for OT', 'Japan'), (3, 'Cinnamon AI Labs', 'Product', '151-300', 'Monday - Friday', 'Extra salary for OT', 'Japan'), (4, 'DAT Technologies', 'Product', '51-150', 'Monday - Friday', 'No OT', 'Vietnam'), (7, 'Viettel Group', 'Product', '1000+', 'Monday - Friday', 'nan', 'Vietnam'), (9, 'VINBRAIN', 'Product', '51-150', 'Monday - Friday', 'No OT', 'Vietnam'), (10, 'KILALA Communication', 'Product', '1-50', 'Monday - Friday', 'No OT', 'Japan'), (11, 'BAEMIN Vietnam (Woowa Bros.)', 'Product', '301-500', 'Monday - Friday', 'No OT', 'South Korea')  ... displaying 10 of 319 total bound parameter sets ...  (461, 'Techcom Securities', 'Product', '151-300', 'Monday - Saturday', 'No OT', 'Vietnam'), (462, 'EVENT MEDICAL', 'Product', '1-50', 'Monday - Friday', 'No OT', 'United States'))
+[2023-03-23T16:18:28.367+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:28,367 INFO sqlalchemy.engine.Engine SET IDENTITY_INSERT company_df OFF
+[2023-03-23T16:18:28.367+0000] {log.py:128} INFO - SET IDENTITY_INSERT company_df OFF
+[2023-03-23T16:18:28.368+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:28,368 INFO sqlalchemy.engine.Engine [raw sql] ()
+[2023-03-23T16:18:28.368+0000] {log.py:128} INFO - [raw sql] ()
+[2023-03-23T16:18:28.402+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:28,402 INFO sqlalchemy.engine.Engine SET IDENTITY_INSERT job_df ON
+[2023-03-23T16:18:28.402+0000] {log.py:128} INFO - SET IDENTITY_INSERT job_df ON
+[2023-03-23T16:18:28.403+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:28,403 INFO sqlalchemy.engine.Engine [raw sql] ()
+[2023-03-23T16:18:28.403+0000] {log.py:128} INFO - [raw sql] ()
+[2023-03-23T16:18:28.406+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:28,405 INFO sqlalchemy.engine.Engine INSERT INTO job_df (id, query, job_url, title, tags, skill, company_name, below_salary, upper_salary, avg_salary, salary_info) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2023-03-23T16:18:28.405+0000] {log.py:128} INFO - INSERT INTO job_df (id, query, job_url, title, tags, skill, company_name, below_salary, upper_salary, avg_salary, salary_info) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2023-03-23T16:18:28.407+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:28,407 INFO sqlalchemy.engine.Engine [generated in 0.01901s] ((1, 'AI', 'https://itviec.com/it-jobs/senior-ai-engineer-chotot-4539?lab_feature=preview_jd_page', 'Senior AI Engineer', "['Python', 'Cloud']", 'The ideal candidate will have a degree in computer science, mathematics, or a related field, with a minimum of 5 years of experience in machine learn ... (1013 characters truncated) ... un, Cloud Function) is a plus\nMust have excellent verbal and written communication skills, have the ability to deliver concise, actionable solutions', 'Chotot', 0, 0, 0, 'nego'), (2, 'AI', 'https://itviec.com/it-jobs/ai-engineer-senior-leader-panasonic-vietnam-group-panasonic-r-d-center-vietnam-prdcv-4317?lab_feature=preview_jd_page', 'AI Engineer (Senior/ Leader)', "['Python', 'C++', 'Java']", '[General requirements]\n• Vietnamese nationality.\n• University degree or higher.\n• Studied in faculty of mathematics or Informatics in University o ... (726 characters truncated) ... cal leader/Project Leader in AI cloud deployment projects are strong plus.\n• Strong skills in negotiating and communication both verbal and written.', 'Panasonic Vietnam Group – Panasonic R&D Center Vietnam (PRDCV)', 0, 0, 0, 'nego'), (3, 'AI', 'https://itviec.com/it-jobs/project-manager-agile-scrum-cinnamon-ai-labs-1618?lab_feature=preview_jd_page', '(HCM) Project Manager (Agile/ Scrum)', "['Project Manager', 'Agile', 'Scrum']", 'Strong business communication in English and Vietnamese. \nMinimum 2 years of working experience, special hands-on experience in the Project Manager  ... (560 characters truncated) ... ving skills \nAttitude to do everything possible to over-achieve project goals. \nPassion to study more knowledge about technology, especially in AI.', 'Cinnamon AI Labs', 0, 0, 0, 'nego'), (4, 'AI', 'https://itviec.com/it-jobs/solution-architect-javascript-python-fintech-3500-dat-technologies-5448?lab_feature=preview_jd_page', 'Solution Architect JavaScript & Python (Fintech) ~$3500', "['Software Architect', 'Python', 'JavaScript']", 'Bachelor’s or Master’s degree in Engineering, Computer Science;\nAt least 8+ years of working experience as software development with at least 2+ yea ... (1413 characters truncated) ... ation, and solving challenging problems;\nHigh adaptability and flexibility to the rapid changes of the business;\nHigh responsibility and diligence.', 'DAT Technologies', 2500, 3500, 3000, 'full'), (5, 'AI', 'https://itviec.com/it-jobs/senior-database-administrator-dba-sql-mongodb-2200-dat-technologies-5718?lab_feature=preview_jd_page', 'Senior Database Administrator (DBA, SQL, MongoDB)~$2200', "['Database', 'Data Analyst', 'SQL']", "Bachelor's degree in Computer Science, Information Technology, or related field\n5+ years of experience in database administration and 2+ years of ex ... (1392 characters truncated) ... oud-based database platforms such as AWS RDS \nExcellent verbal and written communication skills\nAbility to work independently and as part of a team", 'DAT Technologies', 0, 2200, 0, 'semi'), (6, 'AI', 'https://itviec.com/it-jobs/senior-devops-engineer-python-docker-k8s-upto-3500-dat-technologies-4341?lab_feature=preview_jd_page', 'Senior Devops Engineer (Python, Docker, K8s) Upto $3500', "['DevOps', 'Python', 'AWS']", "Bachelor's degree in Computer Science, Information Technology, or related field\n5+ years of experience in DedvOps or cloud infrastructure engineerin ... (873 characters truncated) ... t verbal and written communication skills\nAbility to work independently and as part of a team\nStrong problem-solving skills and attention to detail", 'DAT Technologies', 1000, 3500, 2250, 'full'), (7, 'AI', 'https://itviec.com/it-jobs/20-java-developer-oracle-oop-viettel-group-5539?lab_feature=preview_jd_page', '20 Java Developer (Oracle, OOP)', "['Java', 'OOP', 'Oracle']", 'T?t nghi?p Ð?i h?c b?ng khá tr? lên chuyên ngành CNTT, ÐTVT, Toán tin ?ng d?ng\nÍt nh?t 1 nam kinh nghi?m phát tri?n ?ng d?ng ph?n m?m b?ng ngôn ng?  ... (538 characters truncated) ... ang t? nghiên c?u\nUu tiên ?ng viên có ch?ng ch? qu?c t? c?a Oracle v? phát tri?n ?ng d?ng Java: Java SE, Java EE\nToeic 550 tr? lên ho?c tuong duong', 'Viettel Group', 0, 0, 0, 'nego'), (8, 'AI', 'https://itviec.com/it-jobs/5-frontend-dev-javasript-angular-html5-viettel-group-0552?lab_feature=preview_jd_page', '5 FrontEnd Dev (Javasript, Angular, HTML5)', "['JavaScript', 'HTML5', 'Angular']", 'T?t nghi?p Ð?i h?c b?ng khá tr? lên chuyên ngành CNTT, ÐTVT, Toán tin ?ng d?ng\nHon 3 nam kinh nghi?m xây d?ng các s?n ph?m d?a trên web v?i các khun ... (668 characters truncated) ...  phát tri?n ?ng d?ng theo d?ng Microservice, DEvOPS (Docker, Jenkins)\nHi?u bi?t và thành th?o các công c? Devop nhu Jenkins, Git,... là m?t l?i th?.', 'Viettel Group', 0, 0, 0, 'nego')  ... displaying 10 of 464 total bound parameter sets ...  (463, 'software', 'https://itviec.com/it-jobs/software-project-manager-kis-technology-0203?lab_feature=preview_jd_page', 'Software Project Manager', "['Project Manager', 'Agile', 'Scrum']", 'Excellent oral and written communication in English\nExcellent client-facing and internal communication skills in English including presentation skil ... (419 characters truncated) ... \nMicrosoft Technology (.NET, C#) software development skill is recommended\nAbility to analyze requirements to ensure scope is being met on projects', 'Kis Technology', 2000, 4000, 3000, 'full'), (464, 'software', 'https://itviec.com/it-jobs/viettel-vht-embedded-software-c-linux-viettel-group-4142?lab_feature=preview_jd_page', 'Viettel VHT - Embedded Software (C++, Linux)', "['C++', 'Linux', 'Embedded']", '- T?t nghi?p Ð?i h?c chính quy lo?i Khá tr? lên chuyên ngành: Công ngh? thông tin, Ði?n t? vi?n thông,...ho?c các chuyên ngành k? thu?t khác liên qua ... (728 characters truncated) ... ên h? di?u hành Linux (giao di?n dòng l?nh và d? h?a).\n- Có kinh nghi?m l?p trình ngo?i vi, giao ti?p b? nh?, giao ti?p s? (UART/SPI/I2C/CAN...).\n ', 'Viettel Group', 0, 0, 0, 'nego'))
+[2023-03-23T16:18:28.407+0000] {log.py:128} INFO - [generated in 0.01901s] ((1, 'AI', 'https://itviec.com/it-jobs/senior-ai-engineer-chotot-4539?lab_feature=preview_jd_page', 'Senior AI Engineer', "['Python', 'Cloud']", 'The ideal candidate will have a degree in computer science, mathematics, or a related field, with a minimum of 5 years of experience in machine learn ... (1013 characters truncated) ... un, Cloud Function) is a plus\nMust have excellent verbal and written communication skills, have the ability to deliver concise, actionable solutions', 'Chotot', 0, 0, 0, 'nego'), (2, 'AI', 'https://itviec.com/it-jobs/ai-engineer-senior-leader-panasonic-vietnam-group-panasonic-r-d-center-vietnam-prdcv-4317?lab_feature=preview_jd_page', 'AI Engineer (Senior/ Leader)', "['Python', 'C++', 'Java']", '[General requirements]\n• Vietnamese nationality.\n• University degree or higher.\n• Studied in faculty of mathematics or Informatics in University o ... (726 characters truncated) ... cal leader/Project Leader in AI cloud deployment projects are strong plus.\n• Strong skills in negotiating and communication both verbal and written.', 'Panasonic Vietnam Group – Panasonic R&D Center Vietnam (PRDCV)', 0, 0, 0, 'nego'), (3, 'AI', 'https://itviec.com/it-jobs/project-manager-agile-scrum-cinnamon-ai-labs-1618?lab_feature=preview_jd_page', '(HCM) Project Manager (Agile/ Scrum)', "['Project Manager', 'Agile', 'Scrum']", 'Strong business communication in English and Vietnamese. \nMinimum 2 years of working experience, special hands-on experience in the Project Manager  ... (560 characters truncated) ... ving skills \nAttitude to do everything possible to over-achieve project goals. \nPassion to study more knowledge about technology, especially in AI.', 'Cinnamon AI Labs', 0, 0, 0, 'nego'), (4, 'AI', 'https://itviec.com/it-jobs/solution-architect-javascript-python-fintech-3500-dat-technologies-5448?lab_feature=preview_jd_page', 'Solution Architect JavaScript & Python (Fintech) ~$3500', "['Software Architect', 'Python', 'JavaScript']", 'Bachelor’s or Master’s degree in Engineering, Computer Science;\nAt least 8+ years of working experience as software development with at least 2+ yea ... (1413 characters truncated) ... ation, and solving challenging problems;\nHigh adaptability and flexibility to the rapid changes of the business;\nHigh responsibility and diligence.', 'DAT Technologies', 2500, 3500, 3000, 'full'), (5, 'AI', 'https://itviec.com/it-jobs/senior-database-administrator-dba-sql-mongodb-2200-dat-technologies-5718?lab_feature=preview_jd_page', 'Senior Database Administrator (DBA, SQL, MongoDB)~$2200', "['Database', 'Data Analyst', 'SQL']", "Bachelor's degree in Computer Science, Information Technology, or related field\n5+ years of experience in database administration and 2+ years of ex ... (1392 characters truncated) ... oud-based database platforms such as AWS RDS \nExcellent verbal and written communication skills\nAbility to work independently and as part of a team", 'DAT Technologies', 0, 2200, 0, 'semi'), (6, 'AI', 'https://itviec.com/it-jobs/senior-devops-engineer-python-docker-k8s-upto-3500-dat-technologies-4341?lab_feature=preview_jd_page', 'Senior Devops Engineer (Python, Docker, K8s) Upto $3500', "['DevOps', 'Python', 'AWS']", "Bachelor's degree in Computer Science, Information Technology, or related field\n5+ years of experience in DedvOps or cloud infrastructure engineerin ... (873 characters truncated) ... t verbal and written communication skills\nAbility to work independently and as part of a team\nStrong problem-solving skills and attention to detail", 'DAT Technologies', 1000, 3500, 2250, 'full'), (7, 'AI', 'https://itviec.com/it-jobs/20-java-developer-oracle-oop-viettel-group-5539?lab_feature=preview_jd_page', '20 Java Developer (Oracle, OOP)', "['Java', 'OOP', 'Oracle']", 'T?t nghi?p Ð?i h?c b?ng khá tr? lên chuyên ngành CNTT, ÐTVT, Toán tin ?ng d?ng\nÍt nh?t 1 nam kinh nghi?m phát tri?n ?ng d?ng ph?n m?m b?ng ngôn ng?  ... (538 characters truncated) ... ang t? nghiên c?u\nUu tiên ?ng viên có ch?ng ch? qu?c t? c?a Oracle v? phát tri?n ?ng d?ng Java: Java SE, Java EE\nToeic 550 tr? lên ho?c tuong duong', 'Viettel Group', 0, 0, 0, 'nego'), (8, 'AI', 'https://itviec.com/it-jobs/5-frontend-dev-javasript-angular-html5-viettel-group-0552?lab_feature=preview_jd_page', '5 FrontEnd Dev (Javasript, Angular, HTML5)', "['JavaScript', 'HTML5', 'Angular']", 'T?t nghi?p Ð?i h?c b?ng khá tr? lên chuyên ngành CNTT, ÐTVT, Toán tin ?ng d?ng\nHon 3 nam kinh nghi?m xây d?ng các s?n ph?m d?a trên web v?i các khun ... (668 characters truncated) ...  phát tri?n ?ng d?ng theo d?ng Microservice, DEvOPS (Docker, Jenkins)\nHi?u bi?t và thành th?o các công c? Devop nhu Jenkins, Git,... là m?t l?i th?.', 'Viettel Group', 0, 0, 0, 'nego')  ... displaying 10 of 464 total bound parameter sets ...  (463, 'software', 'https://itviec.com/it-jobs/software-project-manager-kis-technology-0203?lab_feature=preview_jd_page', 'Software Project Manager', "['Project Manager', 'Agile', 'Scrum']", 'Excellent oral and written communication in English\nExcellent client-facing and internal communication skills in English including presentation skil ... (419 characters truncated) ... \nMicrosoft Technology (.NET, C#) software development skill is recommended\nAbility to analyze requirements to ensure scope is being met on projects', 'Kis Technology', 2000, 4000, 3000, 'full'), (464, 'software', 'https://itviec.com/it-jobs/viettel-vht-embedded-software-c-linux-viettel-group-4142?lab_feature=preview_jd_page', 'Viettel VHT - Embedded Software (C++, Linux)', "['C++', 'Linux', 'Embedded']", '- T?t nghi?p Ð?i h?c chính quy lo?i Khá tr? lên chuyên ngành: Công ngh? thông tin, Ði?n t? vi?n thông,...ho?c các chuyên ngành k? thu?t khác liên qua ... (728 characters truncated) ... ên h? di?u hành Linux (giao di?n dòng l?nh và d? h?a).\n- Có kinh nghi?m l?p trình ngo?i vi, giao ti?p b? nh?, giao ti?p s? (UART/SPI/I2C/CAN...).\n ', 'Viettel Group', 0, 0, 0, 'nego'))
+[2023-03-23T16:18:29.639+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:29,639 INFO sqlalchemy.engine.Engine SET IDENTITY_INSERT job_df OFF
+[2023-03-23T16:18:29.639+0000] {log.py:128} INFO - SET IDENTITY_INSERT job_df OFF
+[2023-03-23T16:18:29.640+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:29,640 INFO sqlalchemy.engine.Engine [raw sql] ()
+[2023-03-23T16:18:29.640+0000] {log.py:128} INFO - [raw sql] ()
+[2023-03-23T16:18:29.656+0000] {logging_mixin.py:137} INFO - 2023-03-23 16:18:29,656 INFO sqlalchemy.engine.Engine COMMIT
+[2023-03-23T16:18:29.656+0000] {log.py:128} INFO - COMMIT
+[2023-03-23T16:18:29.659+0000] {logging_mixin.py:137} INFO - Load done...
+[2023-03-23T16:18:29.660+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-03-23T16:18:29.671+0000] {taskinstance.py:1326} INFO - Marking task as SUCCESS. dag_id=ETL_final, task_id=ETL, execution_date=20230322T000000, start_date=20230323T161823, end_date=20230323T161829
+[2023-03-23T16:18:29.714+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-03-23T16:18:29.731+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

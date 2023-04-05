@@ -1,0 +1,24 @@
+[2023-03-16T09:55:25.268+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_with_python_operator_v6.greet manual__2023-03-16T09:55:23.709593+00:00 [queued]>
+[2023-03-16T09:55:25.278+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_with_python_operator_v6.greet manual__2023-03-16T09:55:23.709593+00:00 [queued]>
+[2023-03-16T09:55:25.279+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-16T09:55:25.279+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 6
+[2023-03-16T09:55:25.280+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-16T09:55:25.296+0000] {taskinstance.py:1303} INFO - Executing <Task(PythonOperator): greet> on 2023-03-16 09:55:23.709593+00:00
+[2023-03-16T09:55:25.299+0000] {standard_task_runner.py:55} INFO - Started process 1806 to run task
+[2023-03-16T09:55:25.301+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_with_python_operator_v6', 'greet', 'manual__2023-03-16T09:55:23.709593+00:00', '--job-id', '44', '--raw', '--subdir', 'DAGS_FOLDER/python_operator.py', '--cfg-path', '/tmp/tmpn8rg_l0g']
+[2023-03-16T09:55:25.303+0000] {standard_task_runner.py:83} INFO - Job 44: Subtask greet
+[2023-03-16T09:55:25.367+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_with_python_operator_v6.greet manual__2023-03-16T09:55:23.709593+00:00 [running]> on host c3799dfdd69d
+[2023-03-16T09:55:25.445+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Mr.Phi
+AIRFLOW_CTX_DAG_ID=dag_with_python_operator_v6
+AIRFLOW_CTX_TASK_ID=greet
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-16T09:55:23.709593+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-16T09:55:23.709593+00:00
+[2023-03-16T09:55:25.468+0000] {logging_mixin.py:137} INFO - Hello World! My name is None None, and I am 19
+[2023-03-16T09:55:25.469+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-03-16T09:55:25.478+0000] {taskinstance.py:1326} INFO - Marking task as SUCCESS. dag_id=dag_with_python_operator_v6, task_id=greet, execution_date=20230316T095523, start_date=20230316T095525, end_date=20230316T095525
+[2023-03-16T09:55:25.514+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-03-16T09:55:25.543+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

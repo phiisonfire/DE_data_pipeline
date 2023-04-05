@@ -1,0 +1,23 @@
+[2023-03-19T04:04:29.053+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_with_python_operator_v11.get_age scheduled__2023-03-18T00:00:00+00:00 [queued]>
+[2023-03-19T04:04:29.076+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_with_python_operator_v11.get_age scheduled__2023-03-18T00:00:00+00:00 [queued]>
+[2023-03-19T04:04:29.077+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-19T04:04:29.078+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 6
+[2023-03-19T04:04:29.079+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-19T04:04:29.116+0000] {taskinstance.py:1303} INFO - Executing <Task(PythonOperator): get_age> on 2023-03-18 00:00:00+00:00
+[2023-03-19T04:04:29.122+0000] {standard_task_runner.py:55} INFO - Started process 210 to run task
+[2023-03-19T04:04:29.127+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_with_python_operator_v11', 'get_age', 'scheduled__2023-03-18T00:00:00+00:00', '--job-id', '144', '--raw', '--subdir', 'DAGS_FOLDER/python_operator.py', '--cfg-path', '/tmp/tmp_sd0ns3s']
+[2023-03-19T04:04:29.131+0000] {standard_task_runner.py:83} INFO - Job 144: Subtask get_age
+[2023-03-19T04:04:29.270+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_with_python_operator_v11.get_age scheduled__2023-03-18T00:00:00+00:00 [running]> on host 0f9e9c2061ea
+[2023-03-19T04:04:29.451+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Mr.Phi
+AIRFLOW_CTX_DAG_ID=dag_with_python_operator_v11
+AIRFLOW_CTX_TASK_ID=get_age
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-18T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-18T00:00:00+00:00
+[2023-03-19T04:04:29.482+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-03-19T04:04:29.504+0000] {taskinstance.py:1326} INFO - Marking task as SUCCESS. dag_id=dag_with_python_operator_v11, task_id=get_age, execution_date=20230318T000000, start_date=20230319T040429, end_date=20230319T040429
+[2023-03-19T04:04:29.539+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-03-19T04:04:29.572+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

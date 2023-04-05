@@ -1,0 +1,48 @@
+[2023-03-22T12:06:55.699+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_test_v03.test_pandas scheduled__2023-03-20T00:00:00+00:00 [queued]>
+[2023-03-22T12:06:55.718+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_test_v03.test_pandas scheduled__2023-03-20T00:00:00+00:00 [queued]>
+[2023-03-22T12:06:55.719+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-22T12:06:55.720+0000] {taskinstance.py:1283} INFO - Starting attempt 6 of 6
+[2023-03-22T12:06:55.721+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-22T12:06:55.755+0000] {taskinstance.py:1303} INFO - Executing <Task(PythonOperator): test_pandas> on 2023-03-20 00:00:00+00:00
+[2023-03-22T12:06:55.765+0000] {standard_task_runner.py:55} INFO - Started process 640 to run task
+[2023-03-22T12:06:55.770+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'etl_test_v03', 'test_pandas', 'scheduled__2023-03-20T00:00:00+00:00', '--job-id', '342', '--raw', '--subdir', 'DAGS_FOLDER/etl_test.py', '--cfg-path', '/tmp/tmplypt8tyn']
+[2023-03-22T12:06:56.156+0000] {standard_task_runner.py:83} INFO - Job 342: Subtask test_pandas
+[2023-03-22T12:06:56.285+0000] {task_command.py:388} INFO - Running <TaskInstance: etl_test_v03.test_pandas scheduled__2023-03-20T00:00:00+00:00 [running]> on host 7a7b82ed390a
+[2023-03-22T12:06:56.532+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Mr.Phi
+AIRFLOW_CTX_DAG_ID=etl_test_v03
+AIRFLOW_CTX_TASK_ID=test_pandas
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-20T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=6
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-20T00:00:00+00:00
+[2023-03-22T12:06:56.553+0000] {base.py:73} INFO - Using connection ID 'ssms' for task execution.
+[2023-03-22T12:06:56.556+0000] {taskinstance.py:1775} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "src/pymssql/_pymssql.pyx", line 647, in pymssql._pymssql.connect
+  File "src/pymssql/_mssql.pyx", line 2109, in pymssql._mssql.connect
+  File "src/pymssql/_mssql.pyx", line 701, in pymssql._mssql.MSSQLConnection.__init__
+  File "src/pymssql/_mssql.pyx", line 1818, in pymssql._mssql.maybe_raise_MSSQLDatabaseException
+  File "src/pymssql/_mssql.pyx", line 1835, in pymssql._mssql.raise_MSSQLDatabaseException
+pymssql._mssql.MSSQLDatabaseException: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (127.0.0.1)\nNet-Lib error during Connection refused (111)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (127.0.0.1)\nNet-Lib error during Connection refused (111)\n')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/etl_test.py", line 23, in get_src_tables
+    df = hook.get_pandas_df(sql)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/hooks/sql.py", line 200, in get_pandas_df
+    with closing(self.get_conn()) as conn:
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/microsoft/mssql/hooks/mssql.py", line 102, in get_conn
+    port=conn.port,
+  File "src/pymssql/_pymssql.pyx", line 653, in pymssql._pymssql.connect
+pymssql._pymssql.OperationalError: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (127.0.0.1)\nNet-Lib error during Connection refused (111)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (127.0.0.1)\nNet-Lib error during Connection refused (111)\n')
+[2023-03-22T12:06:56.581+0000] {taskinstance.py:1326} INFO - Marking task as FAILED. dag_id=etl_test_v03, task_id=test_pandas, execution_date=20230320T000000, start_date=20230322T120655, end_date=20230322T120656
+[2023-03-22T12:06:56.609+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 342 for task test_pandas ((20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (127.0.0.1)\nNet-Lib error during Connection refused (111)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (127.0.0.1)\nNet-Lib error during Connection refused (111)\n'); 640)
+[2023-03-22T12:06:56.665+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-03-22T12:06:56.874+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

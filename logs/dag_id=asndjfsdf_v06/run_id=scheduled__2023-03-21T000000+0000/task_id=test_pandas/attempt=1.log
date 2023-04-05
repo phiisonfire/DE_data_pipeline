@@ -1,0 +1,24 @@
+[2023-03-22T14:50:06.392+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: asndjfsdf_v06.test_pandas scheduled__2023-03-21T00:00:00+00:00 [queued]>
+[2023-03-22T14:50:06.404+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: asndjfsdf_v06.test_pandas scheduled__2023-03-21T00:00:00+00:00 [queued]>
+[2023-03-22T14:50:06.404+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-22T14:50:06.405+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 6
+[2023-03-22T14:50:06.405+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-22T14:50:06.426+0000] {taskinstance.py:1303} INFO - Executing <Task(PythonOperator): test_pandas> on 2023-03-21 00:00:00+00:00
+[2023-03-22T14:50:06.430+0000] {standard_task_runner.py:55} INFO - Started process 8358 to run task
+[2023-03-22T14:50:06.435+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'asndjfsdf_v06', 'test_pandas', 'scheduled__2023-03-21T00:00:00+00:00', '--job-id', '425', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_cron_expression.py', '--cfg-path', '/tmp/tmpy8lnaxkk']
+[2023-03-22T14:50:06.438+0000] {standard_task_runner.py:83} INFO - Job 425: Subtask test_pandas
+[2023-03-22T14:50:06.572+0000] {task_command.py:388} INFO - Running <TaskInstance: asndjfsdf_v06.test_pandas scheduled__2023-03-21T00:00:00+00:00 [running]> on host 7a7b82ed390a
+[2023-03-22T14:50:06.708+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Mr.Phi
+AIRFLOW_CTX_DAG_ID=asndjfsdf_v06
+AIRFLOW_CTX_TASK_ID=test_pandas
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-21T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-21T00:00:00+00:00
+[2023-03-22T14:50:06.710+0000] {logging_mixin.py:137} INFO - SK learn version: 1.4.46
+[2023-03-22T14:50:06.713+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-03-22T14:50:06.731+0000] {taskinstance.py:1326} INFO - Marking task as SUCCESS. dag_id=asndjfsdf_v06, task_id=test_pandas, execution_date=20230321T000000, start_date=20230322T145006, end_date=20230322T145006
+[2023-03-22T14:50:06.928+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-03-22T14:50:07.113+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

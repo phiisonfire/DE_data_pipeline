@@ -1,0 +1,44 @@
+[2023-03-20T11:02:02.462+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_v02.crawl_data_then_load_to_datalake scheduled__2023-03-19T00:00:00+00:00 [queued]>
+[2023-03-20T11:02:02.474+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_v02.crawl_data_then_load_to_datalake scheduled__2023-03-19T00:00:00+00:00 [queued]>
+[2023-03-20T11:02:02.475+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-20T11:02:02.476+0000] {taskinstance.py:1283} INFO - Starting attempt 6 of 6
+[2023-03-20T11:02:02.476+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-20T11:02:02.494+0000] {taskinstance.py:1303} INFO - Executing <Task(PythonOperator): crawl_data_then_load_to_datalake> on 2023-03-19 00:00:00+00:00
+[2023-03-20T11:02:02.498+0000] {standard_task_runner.py:55} INFO - Started process 617 to run task
+[2023-03-20T11:02:02.501+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ETL_v02', 'crawl_data_then_load_to_datalake', 'scheduled__2023-03-19T00:00:00+00:00', '--job-id', '216', '--raw', '--subdir', 'DAGS_FOLDER/DE_ETL.py', '--cfg-path', '/tmp/tmpdhkeyi2z']
+[2023-03-20T11:02:02.503+0000] {standard_task_runner.py:83} INFO - Job 216: Subtask crawl_data_then_load_to_datalake
+[2023-03-20T11:02:02.570+0000] {task_command.py:388} INFO - Running <TaskInstance: ETL_v02.crawl_data_then_load_to_datalake scheduled__2023-03-19T00:00:00+00:00 [running]> on host 0460afb3b5cd
+[2023-03-20T11:02:02.651+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Mr.Phi
+AIRFLOW_CTX_DAG_ID=ETL_v02
+AIRFLOW_CTX_TASK_ID=crawl_data_then_load_to_datalake
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-19T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=6
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-19T00:00:00+00:00
+[2023-03-20T11:02:03.898+0000] {taskinstance.py:1775} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/DE_ETL.py", line 302, in crawl_then_load
+    df = crawl(fields=fields)
+  File "/opt/airflow/dags/DE_ETL.py", line 28, in crawl
+    driver = webdriver.Chrome(chrome_options=chrome_options, executable_path="chrome/chromedriver")
+  File "/home/airflow/.local/lib/python3.7/site-packages/selenium/webdriver/chrome/webdriver.py", line 89, in __init__
+    keep_alive,
+  File "/home/airflow/.local/lib/python3.7/site-packages/selenium/webdriver/chromium/webdriver.py", line 101, in __init__
+    self.service.start()
+  File "/home/airflow/.local/lib/python3.7/site-packages/selenium/webdriver/common/service.py", line 104, in start
+    self.assert_process_still_running()
+  File "/home/airflow/.local/lib/python3.7/site-packages/selenium/webdriver/common/service.py", line 117, in assert_process_still_running
+    raise WebDriverException(f"Service {self.path} unexpectedly exited. Status code was: {return_code}")
+selenium.common.exceptions.WebDriverException: Message: Service chrome/chromedriver unexpectedly exited. Status code was: 127
+
+[2023-03-20T11:02:03.914+0000] {taskinstance.py:1326} INFO - Marking task as FAILED. dag_id=ETL_v02, task_id=crawl_data_then_load_to_datalake, execution_date=20230319T000000, start_date=20230320T110202, end_date=20230320T110203
+[2023-03-20T11:02:03.931+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 216 for task crawl_data_then_load_to_datalake (Message: Service chrome/chromedriver unexpectedly exited. Status code was: 127
+; 617)
+[2023-03-20T11:02:03.959+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-03-20T11:02:03.978+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

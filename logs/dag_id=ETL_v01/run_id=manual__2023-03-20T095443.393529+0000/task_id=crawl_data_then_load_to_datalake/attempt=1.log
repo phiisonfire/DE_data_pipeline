@@ -1,0 +1,47 @@
+[2023-03-20T09:54:45.002+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_v01.crawl_data_then_load_to_datalake manual__2023-03-20T09:54:43.393529+00:00 [queued]>
+[2023-03-20T09:54:45.014+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_v01.crawl_data_then_load_to_datalake manual__2023-03-20T09:54:43.393529+00:00 [queued]>
+[2023-03-20T09:54:45.015+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-20T09:54:45.015+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 6
+[2023-03-20T09:54:45.016+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-20T09:54:45.037+0000] {taskinstance.py:1303} INFO - Executing <Task(PythonOperator): crawl_data_then_load_to_datalake> on 2023-03-20 09:54:43.393529+00:00
+[2023-03-20T09:54:45.040+0000] {standard_task_runner.py:55} INFO - Started process 3783 to run task
+[2023-03-20T09:54:45.043+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ETL_v01', 'crawl_data_then_load_to_datalake', 'manual__2023-03-20T09:54:43.393529+00:00', '--job-id', '203', '--raw', '--subdir', 'DAGS_FOLDER/DE_ETL.py', '--cfg-path', '/tmp/tmprgpvyps0']
+[2023-03-20T09:54:45.046+0000] {standard_task_runner.py:83} INFO - Job 203: Subtask crawl_data_then_load_to_datalake
+[2023-03-20T09:54:45.120+0000] {task_command.py:388} INFO - Running <TaskInstance: ETL_v01.crawl_data_then_load_to_datalake manual__2023-03-20T09:54:43.393529+00:00 [running]> on host 0f9e9c2061ea
+[2023-03-20T09:54:45.203+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Mr.Phi
+AIRFLOW_CTX_DAG_ID=ETL_v01
+AIRFLOW_CTX_TASK_ID=crawl_data_then_load_to_datalake
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-20T09:54:43.393529+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-20T09:54:43.393529+00:00
+[2023-03-20T09:54:45.655+0000] {logger.py:11} INFO - ====== WebDriver manager ======
+[2023-03-20T09:54:45.699+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome None
+[2023-03-20T09:54:47.851+0000] {logger.py:11} INFO - Driver [/home/***/.wdm/drivers/chromedriver/linux64/111.0.5563/chromedriver] found in cache
+[2023-03-20T09:54:48.361+0000] {taskinstance.py:1775} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/DE_ETL.py", line 302, in crawl_then_load
+    df = crawl(fields=fields)
+  File "/opt/airflow/dags/DE_ETL.py", line 28, in crawl
+    driver = webdriver.Chrome(ChromeDriverManager().install())
+  File "/home/airflow/.local/lib/python3.7/site-packages/selenium/webdriver/chrome/webdriver.py", line 89, in __init__
+    keep_alive,
+  File "/home/airflow/.local/lib/python3.7/site-packages/selenium/webdriver/chromium/webdriver.py", line 101, in __init__
+    self.service.start()
+  File "/home/airflow/.local/lib/python3.7/site-packages/selenium/webdriver/common/service.py", line 104, in start
+    self.assert_process_still_running()
+  File "/home/airflow/.local/lib/python3.7/site-packages/selenium/webdriver/common/service.py", line 117, in assert_process_still_running
+    raise WebDriverException(f"Service {self.path} unexpectedly exited. Status code was: {return_code}")
+selenium.common.exceptions.WebDriverException: Message: Service /home/airflow/.wdm/drivers/chromedriver/linux64/111.0.5563/chromedriver unexpectedly exited. Status code was: 127
+
+[2023-03-20T09:54:48.410+0000] {taskinstance.py:1326} INFO - Marking task as UP_FOR_RETRY. dag_id=ETL_v01, task_id=crawl_data_then_load_to_datalake, execution_date=20230320T095443, start_date=20230320T095445, end_date=20230320T095448
+[2023-03-20T09:54:48.431+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 203 for task crawl_data_then_load_to_datalake (Message: Service /home/airflow/.wdm/drivers/chromedriver/linux64/111.0.5563/chromedriver unexpectedly exited. Status code was: 127
+; 3783)
+[2023-03-20T09:54:48.481+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-03-20T09:54:48.531+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

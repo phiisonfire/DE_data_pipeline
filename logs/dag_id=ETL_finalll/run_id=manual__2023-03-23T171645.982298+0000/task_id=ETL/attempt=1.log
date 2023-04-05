@@ -1,0 +1,331 @@
+[2023-03-23T17:16:46.897+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_finalll.ETL manual__2023-03-23T17:16:45.982298+00:00 [queued]>
+[2023-03-23T17:16:46.907+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_finalll.ETL manual__2023-03-23T17:16:45.982298+00:00 [queued]>
+[2023-03-23T17:16:46.908+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-23T17:16:46.908+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 6
+[2023-03-23T17:16:46.909+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-23T17:16:46.927+0000] {taskinstance.py:1303} INFO - Executing <Task(PythonOperator): ETL> on 2023-03-23 17:16:45.982298+00:00
+[2023-03-23T17:16:46.932+0000] {standard_task_runner.py:55} INFO - Started process 6763 to run task
+[2023-03-23T17:16:46.934+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ETL_finalll', 'ETL', 'manual__2023-03-23T17:16:45.982298+00:00', '--job-id', '466', '--raw', '--subdir', 'DAGS_FOLDER/DE_ETL.py', '--cfg-path', '/tmp/tmpm4507j3r']
+[2023-03-23T17:16:46.936+0000] {standard_task_runner.py:83} INFO - Job 466: Subtask ETL
+[2023-03-23T17:16:47.002+0000] {task_command.py:388} INFO - Running <TaskInstance: ETL_finalll.ETL manual__2023-03-23T17:16:45.982298+00:00 [running]> on host 7a7b82ed390a
+[2023-03-23T17:16:47.079+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Mr.Phi
+AIRFLOW_CTX_DAG_ID=ETL_finalll
+AIRFLOW_CTX_TASK_ID=ETL
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-23T17:16:45.982298+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-23T17:16:45.982298+00:00
+[2023-03-23T17:16:47.508+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:47,508 INFO sqlalchemy.engine.Engine SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+[2023-03-23T17:16:47.508+0000] {log.py:128} INFO - SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+[2023-03-23T17:16:47.509+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:47,509 INFO sqlalchemy.engine.Engine [raw sql] ()
+[2023-03-23T17:16:47.509+0000] {log.py:128} INFO - [raw sql] ()
+[2023-03-23T17:16:47.513+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:47,513 INFO sqlalchemy.engine.Engine SELECT schema_name()
+[2023-03-23T17:16:47.513+0000] {log.py:128} INFO - SELECT schema_name()
+[2023-03-23T17:16:47.514+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:47,514 INFO sqlalchemy.engine.Engine [generated in 0.00137s] ()
+[2023-03-23T17:16:47.514+0000] {log.py:128} INFO - [generated in 0.00137s] ()
+[2023-03-23T17:16:47.531+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:47,531 INFO sqlalchemy.engine.Engine SELECT CAST('test max support' AS NVARCHAR(max))
+[2023-03-23T17:16:47.531+0000] {log.py:128} INFO - SELECT CAST('test max support' AS NVARCHAR(max))
+[2023-03-23T17:16:47.533+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:47,533 INFO sqlalchemy.engine.Engine [generated in 0.00131s] ()
+[2023-03-23T17:16:47.533+0000] {log.py:128} INFO - [generated in 0.00131s] ()
+[2023-03-23T17:16:47.541+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:47,541 INFO sqlalchemy.engine.Engine SELECT [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME] 
+FROM [INFORMATION_SCHEMA].[TABLES] 
+WHERE [INFORMATION_SCHEMA].[TABLES].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[TABLES].[TABLE_TYPE] = CAST(? AS NVARCHAR(max)) ORDER BY [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME]
+[2023-03-23T17:16:47.541+0000] {log.py:128} INFO - SELECT [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME] 
+FROM [INFORMATION_SCHEMA].[TABLES] 
+WHERE [INFORMATION_SCHEMA].[TABLES].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[TABLES].[TABLE_TYPE] = CAST(? AS NVARCHAR(max)) ORDER BY [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME]
+[2023-03-23T17:16:47.542+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:47,542 INFO sqlalchemy.engine.Engine [generated in 0.00140s] ('dbo', 'BASE TABLE')
+[2023-03-23T17:16:47.542+0000] {log.py:128} INFO - [generated in 0.00140s] ('dbo', 'BASE TABLE')
+[2023-03-23T17:16:47.571+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:47,571 INFO sqlalchemy.engine.Engine SELECT [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME] 
+FROM [INFORMATION_SCHEMA].[TABLES] 
+WHERE [INFORMATION_SCHEMA].[TABLES].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[TABLES].[TABLE_TYPE] = CAST(? AS NVARCHAR(max)) ORDER BY [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME]
+[2023-03-23T17:16:47.571+0000] {log.py:128} INFO - SELECT [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME] 
+FROM [INFORMATION_SCHEMA].[TABLES] 
+WHERE [INFORMATION_SCHEMA].[TABLES].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[TABLES].[TABLE_TYPE] = CAST(? AS NVARCHAR(max)) ORDER BY [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME]
+[2023-03-23T17:16:47.573+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:47,572 INFO sqlalchemy.engine.Engine [cached since 0.03156s ago] ('dbo', 'VIEW')
+[2023-03-23T17:16:47.572+0000] {log.py:128} INFO - [cached since 0.03156s ago] ('dbo', 'VIEW')
+[2023-03-23T17:16:47.606+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:47,606 INFO sqlalchemy.engine.Engine SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME], sys.computed_columns.definition, sys.computed_columns.is_persisted, sys.identity_columns.is_identity, CAST(sys.identity_columns.seed_value AS NUMERIC) AS seed_value, CAST(sys.identity_columns.increment_value AS NUMERIC) AS increment_value 
+FROM [INFORMATION_SCHEMA].[COLUMNS] LEFT OUTER JOIN sys.computed_columns ON sys.computed_columns.object_id = object_id([INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] + CAST(? AS NVARCHAR(max)) + [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME]) AND sys.computed_columns.name = ([INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME] COLLATE DATABASE_DEFAULT) LEFT OUTER JOIN sys.identity_columns ON sys.identity_columns.object_id = object_id([INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] + CAST(? AS NVARCHAR(max)) + [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME]) AND sys.identity_columns.name = ([INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME] COLLATE DATABASE_DEFAULT) 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max)) ORDER BY [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION]
+[2023-03-23T17:16:47.606+0000] {log.py:128} INFO - SELECT [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA], [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME], [INFORMATION_SCHEMA].[COLUMNS].[IS_NULLABLE], [INFORMATION_SCHEMA].[COLUMNS].[DATA_TYPE], [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION], [INFORMATION_SCHEMA].[COLUMNS].[CHARACTER_MAXIMUM_LENGTH], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_PRECISION], [INFORMATION_SCHEMA].[COLUMNS].[NUMERIC_SCALE], [INFORMATION_SCHEMA].[COLUMNS].[COLUMN_DEFAULT], [INFORMATION_SCHEMA].[COLUMNS].[COLLATION_NAME], sys.computed_columns.definition, sys.computed_columns.is_persisted, sys.identity_columns.is_identity, CAST(sys.identity_columns.seed_value AS NUMERIC) AS seed_value, CAST(sys.identity_columns.increment_value AS NUMERIC) AS increment_value 
+FROM [INFORMATION_SCHEMA].[COLUMNS] LEFT OUTER JOIN sys.computed_columns ON sys.computed_columns.object_id = object_id([INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] + CAST(? AS NVARCHAR(max)) + [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME]) AND sys.computed_columns.name = ([INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME] COLLATE DATABASE_DEFAULT) LEFT OUTER JOIN sys.identity_columns ON sys.identity_columns.object_id = object_id([INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] + CAST(? AS NVARCHAR(max)) + [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME]) AND sys.identity_columns.name = ([INFORMATION_SCHEMA].[COLUMNS].[COLUMN_NAME] COLLATE DATABASE_DEFAULT) 
+WHERE [INFORMATION_SCHEMA].[COLUMNS].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[COLUMNS].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max)) ORDER BY [INFORMATION_SCHEMA].[COLUMNS].[ORDINAL_POSITION]
+[2023-03-23T17:16:47.607+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:47,607 INFO sqlalchemy.engine.Engine [generated in 0.00104s] ('.', '.', 'jobs_v03', 'dbo')
+[2023-03-23T17:16:47.607+0000] {log.py:128} INFO - [generated in 0.00104s] ('.', '.', 'jobs_v03', 'dbo')
+[2023-03-23T17:16:47.675+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:47,675 INFO sqlalchemy.engine.Engine SELECT [C].[COLUMN_NAME], [INFORMATION_SCHEMA].[TABLE_CONSTRAINTS].[CONSTRAINT_TYPE], [C].[CONSTRAINT_NAME] 
+FROM [INFORMATION_SCHEMA].[KEY_COLUMN_USAGE] AS [C], [INFORMATION_SCHEMA].[TABLE_CONSTRAINTS] 
+WHERE [INFORMATION_SCHEMA].[TABLE_CONSTRAINTS].[CONSTRAINT_NAME] = [C].[CONSTRAINT_NAME] AND [INFORMATION_SCHEMA].[TABLE_CONSTRAINTS].[TABLE_SCHEMA] = [C].[TABLE_SCHEMA] AND [C].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [C].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max)) ORDER BY [INFORMATION_SCHEMA].[TABLE_CONSTRAINTS].[CONSTRAINT_NAME], [C].[ORDINAL_POSITION]
+[2023-03-23T17:16:47.675+0000] {log.py:128} INFO - SELECT [C].[COLUMN_NAME], [INFORMATION_SCHEMA].[TABLE_CONSTRAINTS].[CONSTRAINT_TYPE], [C].[CONSTRAINT_NAME] 
+FROM [INFORMATION_SCHEMA].[KEY_COLUMN_USAGE] AS [C], [INFORMATION_SCHEMA].[TABLE_CONSTRAINTS] 
+WHERE [INFORMATION_SCHEMA].[TABLE_CONSTRAINTS].[CONSTRAINT_NAME] = [C].[CONSTRAINT_NAME] AND [INFORMATION_SCHEMA].[TABLE_CONSTRAINTS].[TABLE_SCHEMA] = [C].[TABLE_SCHEMA] AND [C].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [C].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max)) ORDER BY [INFORMATION_SCHEMA].[TABLE_CONSTRAINTS].[CONSTRAINT_NAME], [C].[ORDINAL_POSITION]
+[2023-03-23T17:16:47.676+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:47,676 INFO sqlalchemy.engine.Engine [generated in 0.00107s] ('jobs_v03', 'dbo')
+[2023-03-23T17:16:47.676+0000] {log.py:128} INFO - [generated in 0.00107s] ('jobs_v03', 'dbo')
+[2023-03-23T17:16:47.861+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:47,861 INFO sqlalchemy.engine.Engine WITH fk_info AS (
+    SELECT
+        ischema_ref_con.constraint_schema,
+        ischema_ref_con.constraint_name,
+        ischema_key_col.ordinal_position,
+        ischema_key_col.table_schema,
+        ischema_key_col.table_name,
+        ischema_ref_con.unique_constraint_schema,
+        ischema_ref_con.unique_constraint_name,
+        ischema_ref_con.match_option,
+        ischema_ref_con.update_rule,
+        ischema_ref_con.delete_rule,
+        ischema_key_col.column_name AS constrained_column
+    FROM
+        INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS ischema_ref_con
+        INNER JOIN
+        INFORMATION_SCHEMA.KEY_COLUMN_USAGE ischema_key_col ON
+            ischema_key_col.table_schema = ischema_ref_con.constraint_schema
+            AND ischema_key_col.constraint_name =
+            ischema_ref_con.constraint_name
+    WHERE ischema_key_col.table_name = CAST(? AS NVARCHAR(max))
+        AND ischema_key_col.table_schema = CAST(? AS NVARCHAR(max))
+),
+constraint_info AS (
+    SELECT
+        ischema_key_col.constraint_schema,
+        ischema_key_col.constraint_name,
+        ischema_key_col.ordinal_position,
+        ischema_key_col.table_schema,
+        ischema_key_col.table_name,
+        ischema_key_col.column_name
+    FROM
+        INFORMATION_SCHEMA.KEY_COLUMN_USAGE ischema_key_col
+),
+index_info AS (
+    SELECT
+        sys.schemas.name AS index_schema,
+        sys.indexes.name AS index_name,
+        sys.index_columns.key_ordinal AS ordinal_position,
+        sys.schemas.name AS table_schema,
+        sys.objects.name AS table_name,
+        sys.columns.name AS column_name
+    FROM
+        sys.indexes
+        INNER JOIN
+        sys.objects ON
+            sys.objects.object_id = sys.indexes.object_id
+        INNER JOIN
+        sys.schemas ON
+            sys.schemas.schema_id = sys.objects.schema_id
+        INNER JOIN
+        sys.index_columns ON
+            sys.index_columns.object_id = sys.objects.object_id
+            AND sys.index_columns.index_id = sys.indexes.index_id
+        INNER JOIN
+        sys.columns ON
+            sys.columns.object_id = sys.indexes.object_id
+            AND sys.columns.column_id = sys.index_columns.column_id
+)
+    SELECT
+        fk_info.constraint_schema,
+        fk_info.constraint_name,
+        fk_info.ordinal_position,
+        fk_info.constrained_column,
+        constraint_info.table_schema AS referred_table_schema,
+        constraint_info.table_name AS referred_table_name,
+        constraint_info.column_name AS referred_column,
+        fk_info.match_option,
+        fk_info.update_rule,
+        fk_info.delete_rule
+    FROM
+        fk_info INNER JOIN constraint_info ON
+            constraint_info.constraint_schema =
+                fk_info.unique_constraint_schema
+            AND constraint_info.constraint_name =
+                fk_info.unique_constraint_name
+            AND constraint_info.ordinal_position = fk_info.ordinal_position
+    UNION
+    SELECT
+        fk_info.constraint_schema,
+        fk_info.constraint_name,
+        fk_info.ordinal_position,
+        fk_info.constrained_column,
+        index_info.table_schema AS referred_table_schema,
+        index_info.table_name AS referred_table_name,
+        index_info.column_name AS referred_column,
+        fk_info.match_option,
+        fk_info.update_rule,
+        fk_info.delete_rule
+    FROM
+        fk_info INNER JOIN index_info ON
+            index_info.index_schema = fk_info.unique_constraint_schema
+            AND index_info.index_name = fk_info.unique_constraint_name
+            AND index_info.ordinal_position = fk_info.ordinal_position
+
+    ORDER BY fk_info.constraint_schema, fk_info.constraint_name,
+        fk_info.ordinal_position
+[2023-03-23T17:16:47.861+0000] {log.py:128} INFO - WITH fk_info AS (
+    SELECT
+        ischema_ref_con.constraint_schema,
+        ischema_ref_con.constraint_name,
+        ischema_key_col.ordinal_position,
+        ischema_key_col.table_schema,
+        ischema_key_col.table_name,
+        ischema_ref_con.unique_constraint_schema,
+        ischema_ref_con.unique_constraint_name,
+        ischema_ref_con.match_option,
+        ischema_ref_con.update_rule,
+        ischema_ref_con.delete_rule,
+        ischema_key_col.column_name AS constrained_column
+    FROM
+        INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS ischema_ref_con
+        INNER JOIN
+        INFORMATION_SCHEMA.KEY_COLUMN_USAGE ischema_key_col ON
+            ischema_key_col.table_schema = ischema_ref_con.constraint_schema
+            AND ischema_key_col.constraint_name =
+            ischema_ref_con.constraint_name
+    WHERE ischema_key_col.table_name = CAST(? AS NVARCHAR(max))
+        AND ischema_key_col.table_schema = CAST(? AS NVARCHAR(max))
+),
+constraint_info AS (
+    SELECT
+        ischema_key_col.constraint_schema,
+        ischema_key_col.constraint_name,
+        ischema_key_col.ordinal_position,
+        ischema_key_col.table_schema,
+        ischema_key_col.table_name,
+        ischema_key_col.column_name
+    FROM
+        INFORMATION_SCHEMA.KEY_COLUMN_USAGE ischema_key_col
+),
+index_info AS (
+    SELECT
+        sys.schemas.name AS index_schema,
+        sys.indexes.name AS index_name,
+        sys.index_columns.key_ordinal AS ordinal_position,
+        sys.schemas.name AS table_schema,
+        sys.objects.name AS table_name,
+        sys.columns.name AS column_name
+    FROM
+        sys.indexes
+        INNER JOIN
+        sys.objects ON
+            sys.objects.object_id = sys.indexes.object_id
+        INNER JOIN
+        sys.schemas ON
+            sys.schemas.schema_id = sys.objects.schema_id
+        INNER JOIN
+        sys.index_columns ON
+            sys.index_columns.object_id = sys.objects.object_id
+            AND sys.index_columns.index_id = sys.indexes.index_id
+        INNER JOIN
+        sys.columns ON
+            sys.columns.object_id = sys.indexes.object_id
+            AND sys.columns.column_id = sys.index_columns.column_id
+)
+    SELECT
+        fk_info.constraint_schema,
+        fk_info.constraint_name,
+        fk_info.ordinal_position,
+        fk_info.constrained_column,
+        constraint_info.table_schema AS referred_table_schema,
+        constraint_info.table_name AS referred_table_name,
+        constraint_info.column_name AS referred_column,
+        fk_info.match_option,
+        fk_info.update_rule,
+        fk_info.delete_rule
+    FROM
+        fk_info INNER JOIN constraint_info ON
+            constraint_info.constraint_schema =
+                fk_info.unique_constraint_schema
+            AND constraint_info.constraint_name =
+                fk_info.unique_constraint_name
+            AND constraint_info.ordinal_position = fk_info.ordinal_position
+    UNION
+    SELECT
+        fk_info.constraint_schema,
+        fk_info.constraint_name,
+        fk_info.ordinal_position,
+        fk_info.constrained_column,
+        index_info.table_schema AS referred_table_schema,
+        index_info.table_name AS referred_table_name,
+        index_info.column_name AS referred_column,
+        fk_info.match_option,
+        fk_info.update_rule,
+        fk_info.delete_rule
+    FROM
+        fk_info INNER JOIN index_info ON
+            index_info.index_schema = fk_info.unique_constraint_schema
+            AND index_info.index_name = fk_info.unique_constraint_name
+            AND index_info.ordinal_position = fk_info.ordinal_position
+
+    ORDER BY fk_info.constraint_schema, fk_info.constraint_name,
+        fk_info.ordinal_position
+
+[2023-03-23T17:16:47.863+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:47,863 INFO sqlalchemy.engine.Engine [generated in 0.00153s] ('jobs_v03', 'dbo')
+[2023-03-23T17:16:47.863+0000] {log.py:128} INFO - [generated in 0.00153s] ('jobs_v03', 'dbo')
+[2023-03-23T17:16:48.279+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,279 INFO sqlalchemy.engine.Engine select ind.index_id, ind.is_unique, ind.name, ind.filter_definition from sys.indexes as ind join sys.tables as tab on ind.object_id=tab.object_id join sys.schemas as sch on sch.schema_id=tab.schema_id where tab.name = CAST(? AS NVARCHAR(max)) and sch.name=CAST(? AS NVARCHAR(max)) and ind.is_primary_key=0 and ind.type != 0
+[2023-03-23T17:16:48.279+0000] {log.py:128} INFO - select ind.index_id, ind.is_unique, ind.name, ind.filter_definition from sys.indexes as ind join sys.tables as tab on ind.object_id=tab.object_id join sys.schemas as sch on sch.schema_id=tab.schema_id where tab.name = CAST(? AS NVARCHAR(max)) and sch.name=CAST(? AS NVARCHAR(max)) and ind.is_primary_key=0 and ind.type != 0
+[2023-03-23T17:16:48.280+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,280 INFO sqlalchemy.engine.Engine [generated in 0.00109s] ('jobs_v03', 'dbo')
+[2023-03-23T17:16:48.280+0000] {log.py:128} INFO - [generated in 0.00109s] ('jobs_v03', 'dbo')
+[2023-03-23T17:16:48.312+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,312 INFO sqlalchemy.engine.Engine select ind_col.index_id, ind_col.object_id, col.name, ind_col.is_included_column from sys.columns as col join sys.tables as tab on tab.object_id=col.object_id join sys.index_columns as ind_col on (ind_col.column_id=col.column_id and ind_col.object_id=tab.object_id) join sys.schemas as sch on sch.schema_id=tab.schema_id where tab.name=CAST(? AS NVARCHAR(max)) and sch.name=CAST(? AS NVARCHAR(max))
+[2023-03-23T17:16:48.312+0000] {log.py:128} INFO - select ind_col.index_id, ind_col.object_id, col.name, ind_col.is_included_column from sys.columns as col join sys.tables as tab on tab.object_id=col.object_id join sys.index_columns as ind_col on (ind_col.column_id=col.column_id and ind_col.object_id=tab.object_id) join sys.schemas as sch on sch.schema_id=tab.schema_id where tab.name=CAST(? AS NVARCHAR(max)) and sch.name=CAST(? AS NVARCHAR(max))
+[2023-03-23T17:16:48.313+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,313 INFO sqlalchemy.engine.Engine [generated in 0.00117s] ('jobs_v03', 'dbo')
+[2023-03-23T17:16:48.313+0000] {log.py:128} INFO - [generated in 0.00117s] ('jobs_v03', 'dbo')
+[2023-03-23T17:16:48.361+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,361 INFO sqlalchemy.engine.Engine SELECT jobs_v03.id, jobs_v03.query, jobs_v03.job_url, jobs_v03.title, jobs_v03.tags, jobs_v03.address, jobs_v03.at, jobs_v03.last_post, jobs_v03.reason, jobs_v03.description, jobs_v03.skill, jobs_v03.why_work, jobs_v03.salary, jobs_v03.company_url, jobs_v03.company_name, jobs_v03.company_type, jobs_v03.company_people, jobs_v03.company_working_day, jobs_v03.company_ot, jobs_v03.company_nation 
+FROM jobs_v03
+[2023-03-23T17:16:48.361+0000] {log.py:128} INFO - SELECT jobs_v03.id, jobs_v03.query, jobs_v03.job_url, jobs_v03.title, jobs_v03.tags, jobs_v03.address, jobs_v03.at, jobs_v03.last_post, jobs_v03.reason, jobs_v03.description, jobs_v03.skill, jobs_v03.why_work, jobs_v03.salary, jobs_v03.company_url, jobs_v03.company_name, jobs_v03.company_type, jobs_v03.company_people, jobs_v03.company_working_day, jobs_v03.company_ot, jobs_v03.company_nation 
+FROM jobs_v03
+[2023-03-23T17:16:48.362+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,362 INFO sqlalchemy.engine.Engine [generated in 0.00115s] ()
+[2023-03-23T17:16:48.362+0000] {log.py:128} INFO - [generated in 0.00115s] ()
+[2023-03-23T17:16:48.612+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,612 INFO sqlalchemy.engine.Engine SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+[2023-03-23T17:16:48.612+0000] {log.py:128} INFO - SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+[2023-03-23T17:16:48.613+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,613 INFO sqlalchemy.engine.Engine [raw sql] ()
+[2023-03-23T17:16:48.613+0000] {log.py:128} INFO - [raw sql] ()
+[2023-03-23T17:16:48.616+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,616 INFO sqlalchemy.engine.Engine SELECT schema_name()
+[2023-03-23T17:16:48.616+0000] {log.py:128} INFO - SELECT schema_name()
+[2023-03-23T17:16:48.617+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,617 INFO sqlalchemy.engine.Engine [generated in 0.00085s] ()
+[2023-03-23T17:16:48.617+0000] {log.py:128} INFO - [generated in 0.00085s] ()
+[2023-03-23T17:16:48.628+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,627 INFO sqlalchemy.engine.Engine SELECT CAST('test max support' AS NVARCHAR(max))
+[2023-03-23T17:16:48.627+0000] {log.py:128} INFO - SELECT CAST('test max support' AS NVARCHAR(max))
+[2023-03-23T17:16:48.629+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,628 INFO sqlalchemy.engine.Engine [generated in 0.00108s] ()
+[2023-03-23T17:16:48.628+0000] {log.py:128} INFO - [generated in 0.00108s] ()
+[2023-03-23T17:16:48.633+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,633 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+[2023-03-23T17:16:48.633+0000] {log.py:128} INFO - BEGIN (implicit)
+[2023-03-23T17:16:48.636+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,636 INFO sqlalchemy.engine.Engine SELECT [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME], [INFORMATION_SCHEMA].[TABLES].[TABLE_TYPE] 
+FROM [INFORMATION_SCHEMA].[TABLES] 
+WHERE [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[TABLES].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+[2023-03-23T17:16:48.636+0000] {log.py:128} INFO - SELECT [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME], [INFORMATION_SCHEMA].[TABLES].[TABLE_TYPE] 
+FROM [INFORMATION_SCHEMA].[TABLES] 
+WHERE [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[TABLES].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+[2023-03-23T17:16:48.637+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,636 INFO sqlalchemy.engine.Engine [generated in 0.00104s] ('job_df', 'dbo')
+[2023-03-23T17:16:48.636+0000] {log.py:128} INFO - [generated in 0.00104s] ('job_df', 'dbo')
+[2023-03-23T17:16:48.649+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,649 INFO sqlalchemy.engine.Engine SELECT [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME], [INFORMATION_SCHEMA].[TABLES].[TABLE_TYPE] 
+FROM [INFORMATION_SCHEMA].[TABLES] 
+WHERE [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[TABLES].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+[2023-03-23T17:16:48.649+0000] {log.py:128} INFO - SELECT [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME], [INFORMATION_SCHEMA].[TABLES].[TABLE_TYPE] 
+FROM [INFORMATION_SCHEMA].[TABLES] 
+WHERE [INFORMATION_SCHEMA].[TABLES].[TABLE_NAME] = CAST(? AS NVARCHAR(max)) AND [INFORMATION_SCHEMA].[TABLES].[TABLE_SCHEMA] = CAST(? AS NVARCHAR(max))
+[2023-03-23T17:16:48.650+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,650 INFO sqlalchemy.engine.Engine [cached since 0.01444s ago] ('company_df', 'dbo')
+[2023-03-23T17:16:48.650+0000] {log.py:128} INFO - [cached since 0.01444s ago] ('company_df', 'dbo')
+[2023-03-23T17:16:48.661+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,661 INFO sqlalchemy.engine.Engine COMMIT
+[2023-03-23T17:16:48.661+0000] {log.py:128} INFO - COMMIT
+[2023-03-23T17:16:48.664+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,664 INFO sqlalchemy.engine.Engine SELECT job_url FROM job_df
+[2023-03-23T17:16:48.664+0000] {log.py:128} INFO - SELECT job_url FROM job_df
+[2023-03-23T17:16:48.665+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,665 INFO sqlalchemy.engine.Engine [raw sql] ()
+[2023-03-23T17:16:48.665+0000] {log.py:128} INFO - [raw sql] ()
+[2023-03-23T17:16:48.676+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,676 INFO sqlalchemy.engine.Engine SELECT company_name FROM company_df
+[2023-03-23T17:16:48.676+0000] {log.py:128} INFO - SELECT company_name FROM company_df
+[2023-03-23T17:16:48.677+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,677 INFO sqlalchemy.engine.Engine [raw sql] ()
+[2023-03-23T17:16:48.677+0000] {log.py:128} INFO - [raw sql] ()
+[2023-03-23T17:16:48.683+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,683 INFO sqlalchemy.engine.Engine SELECT TOP 1 id FROM job_df ORDER BY id DESC
+[2023-03-23T17:16:48.683+0000] {log.py:128} INFO - SELECT TOP 1 id FROM job_df ORDER BY id DESC
+[2023-03-23T17:16:48.684+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,684 INFO sqlalchemy.engine.Engine [raw sql] ()
+[2023-03-23T17:16:48.684+0000] {log.py:128} INFO - [raw sql] ()
+[2023-03-23T17:16:48.690+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,690 INFO sqlalchemy.engine.Engine SELECT TOP 1 company_id FROM company_df ORDER BY company_id DESC
+[2023-03-23T17:16:48.690+0000] {log.py:128} INFO - SELECT TOP 1 company_id FROM company_df ORDER BY company_id DESC
+[2023-03-23T17:16:48.691+0000] {logging_mixin.py:137} INFO - 2023-03-23 17:16:48,691 INFO sqlalchemy.engine.Engine [raw sql] ()
+[2023-03-23T17:16:48.691+0000] {log.py:128} INFO - [raw sql] ()
+[2023-03-23T17:16:48.700+0000] {logging_mixin.py:137} WARNING - /home/***/.local/lib/python3.7/site-packages/pandas/core/frame.py:4913 SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2023-03-23T17:16:48.710+0000] {logging_mixin.py:137} INFO - Load done...
+[2023-03-23T17:16:48.711+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-03-23T17:16:48.721+0000] {taskinstance.py:1326} INFO - Marking task as SUCCESS. dag_id=ETL_finalll, task_id=ETL, execution_date=20230323T171645, start_date=20230323T171646, end_date=20230323T171648
+[2023-03-23T17:16:48.754+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-03-23T17:16:48.772+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

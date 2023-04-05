@@ -1,0 +1,28 @@
+[2023-03-16T09:10:05.683+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: phi_first_dag_v3.third_task scheduled__2023-03-15T00:00:00+00:00 [queued]>
+[2023-03-16T09:10:05.699+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: phi_first_dag_v3.third_task scheduled__2023-03-15T00:00:00+00:00 [queued]>
+[2023-03-16T09:10:05.700+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-16T09:10:05.700+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 6
+[2023-03-16T09:10:05.701+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-16T09:10:05.725+0000] {taskinstance.py:1303} INFO - Executing <Task(BashOperator): third_task> on 2023-03-15 00:00:00+00:00
+[2023-03-16T09:10:05.730+0000] {standard_task_runner.py:55} INFO - Started process 192 to run task
+[2023-03-16T09:10:05.734+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'phi_first_dag_v3', 'third_task', 'scheduled__2023-03-15T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/phi_first_dag.py', '--cfg-path', '/tmp/tmpgqaaa2li']
+[2023-03-16T09:10:05.737+0000] {standard_task_runner.py:83} INFO - Job 16: Subtask third_task
+[2023-03-16T09:10:05.832+0000] {task_command.py:388} INFO - Running <TaskInstance: phi_first_dag_v3.third_task scheduled__2023-03-15T00:00:00+00:00 [running]> on host c3799dfdd69d
+[2023-03-16T09:10:05.926+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Mr.Phi
+AIRFLOW_CTX_DAG_ID=phi_first_dag_v3
+AIRFLOW_CTX_TASK_ID=third_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-15T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-15T00:00:00+00:00
+[2023-03-16T09:10:05.928+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-03-16T09:10:05.929+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo this is task 3']
+[2023-03-16T09:10:05.936+0000] {subprocess.py:86} INFO - Output:
+[2023-03-16T09:10:05.938+0000] {subprocess.py:93} INFO - this is task 3
+[2023-03-16T09:10:05.939+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-03-16T09:10:05.970+0000] {taskinstance.py:1326} INFO - Marking task as SUCCESS. dag_id=phi_first_dag_v3, task_id=third_task, execution_date=20230315T000000, start_date=20230316T091005, end_date=20230316T091005
+[2023-03-16T09:10:06.027+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-03-16T09:10:06.049+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

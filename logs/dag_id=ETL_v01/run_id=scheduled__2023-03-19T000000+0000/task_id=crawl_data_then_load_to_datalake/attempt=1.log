@@ -1,0 +1,132 @@
+[2023-03-20T09:17:25.901+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_v01.crawl_data_then_load_to_datalake scheduled__2023-03-19T00:00:00+00:00 [queued]>
+[2023-03-20T09:17:25.912+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_v01.crawl_data_then_load_to_datalake scheduled__2023-03-19T00:00:00+00:00 [queued]>
+[2023-03-20T09:17:25.913+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-20T09:17:25.913+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 6
+[2023-03-20T09:17:25.914+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-20T09:17:25.931+0000] {taskinstance.py:1303} INFO - Executing <Task(PythonOperator): crawl_data_then_load_to_datalake> on 2023-03-19 00:00:00+00:00
+[2023-03-20T09:17:25.934+0000] {standard_task_runner.py:55} INFO - Started process 951 to run task
+[2023-03-20T09:17:25.937+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ETL_v01', 'crawl_data_then_load_to_datalake', 'scheduled__2023-03-19T00:00:00+00:00', '--job-id', '196', '--raw', '--subdir', 'DAGS_FOLDER/DE_ETL.py', '--cfg-path', '/tmp/tmp9lbuxbys']
+[2023-03-20T09:17:25.940+0000] {standard_task_runner.py:83} INFO - Job 196: Subtask crawl_data_then_load_to_datalake
+[2023-03-20T09:17:26.032+0000] {task_command.py:388} INFO - Running <TaskInstance: ETL_v01.crawl_data_then_load_to_datalake scheduled__2023-03-19T00:00:00+00:00 [running]> on host 0f9e9c2061ea
+[2023-03-20T09:17:26.116+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Mr.Phi
+AIRFLOW_CTX_DAG_ID=ETL_v01
+AIRFLOW_CTX_TASK_ID=crawl_data_then_load_to_datalake
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-19T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-19T00:00:00+00:00
+[2023-03-20T09:17:27.591+0000] {logger.py:11} INFO - ====== WebDriver manager ======
+[2023-03-20T09:17:27.640+0000] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome None
+[2023-03-20T09:17:29.053+0000] {logger.py:11} INFO - There is no [linux64] chromedriver for browser None in cache
+[2023-03-20T09:17:29.054+0000] {logger.py:11} INFO - About to download new driver from https://chromedriver.storage.googleapis.com/111.0.5563.64/chromedriver_linux64.zip
+[2023-03-20T09:17:29.242+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:   0%|          | 0.00/6.83M [00:00<?, ?B/s]
+[2023-03-20T09:17:29.436+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:   1%|          | 40.0k/6.83M [00:00<00:33, 213kB/s]
+[2023-03-20T09:17:29.657+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:   2%|1         | 112k/6.83M [00:00<00:24, 287kB/s] 
+[2023-03-20T09:17:29.827+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:   3%|2         | 184k/6.83M [00:00<00:20, 347kB/s]
+[2023-03-20T09:17:29.943+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:   4%|3         | 264k/6.83M [00:00<00:15, 448kB/s]
+[2023-03-20T09:17:30.052+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:   5%|4         | 336k/6.83M [00:00<00:13, 511kB/s]
+[2023-03-20T09:17:30.153+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:   6%|5         | 408k/6.83M [00:00<00:11, 570kB/s]
+[2023-03-20T09:17:30.263+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:   7%|6         | 472k/6.83M [00:01<00:11, 578kB/s]
+[2023-03-20T09:17:30.369+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:   8%|7         | 544k/6.83M [00:01<00:10, 611kB/s]
+[2023-03-20T09:17:30.491+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:   9%|8         | 608k/6.83M [00:01<00:11, 588kB/s]
+[2023-03-20T09:17:30.674+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  10%|9         | 672k/6.83M [00:01<00:13, 494kB/s]
+[2023-03-20T09:17:30.776+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  11%|#1        | 792k/6.83M [00:01<00:09, 668kB/s]
+[2023-03-20T09:17:30.883+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  12%|#2        | 864k/6.83M [00:01<00:09, 674kB/s]
+[2023-03-20T09:17:31.167+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  13%|#3        | 936k/6.83M [00:01<00:13, 465kB/s]
+[2023-03-20T09:17:31.272+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  15%|#4        | 1.02M/6.83M [00:02<00:10, 597kB/s]
+[2023-03-20T09:17:31.425+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  16%|#6        | 1.09M/6.83M [00:02<00:10, 562kB/s]
+[2023-03-20T09:17:31.556+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  17%|#7        | 1.18M/6.83M [00:02<00:09, 596kB/s]
+[2023-03-20T09:17:31.924+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  18%|#8        | 1.25M/6.83M [00:02<00:15, 390kB/s]
+[2023-03-20T09:17:32.305+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  20%|##        | 1.37M/6.83M [00:03<00:15, 361kB/s]
+[2023-03-20T09:17:32.409+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  22%|##1       | 1.48M/6.83M [00:03<00:11, 468kB/s]
+[2023-03-20T09:17:32.652+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  23%|##2       | 1.54M/6.83M [00:03<00:13, 403kB/s]
+[2023-03-20T09:17:32.899+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  23%|##3       | 1.59M/6.83M [00:03<00:15, 348kB/s]
+[2023-03-20T09:17:33.020+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  24%|##4       | 1.64M/6.83M [00:03<00:15, 359kB/s]
+[2023-03-20T09:17:33.148+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  25%|##4       | 1.69M/6.83M [00:03<00:14, 364kB/s]
+[2023-03-20T09:17:33.265+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  26%|##6       | 1.79M/6.83M [00:04<00:10, 485kB/s]
+[2023-03-20T09:17:33.412+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  27%|##6       | 1.84M/6.83M [00:04<00:11, 458kB/s]
+[2023-03-20T09:17:33.617+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  28%|##7       | 1.90M/6.83M [00:04<00:13, 394kB/s]
+[2023-03-20T09:17:33.717+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  29%|##8       | 1.98M/6.83M [00:04<00:10, 479kB/s]
+[2023-03-20T09:17:33.836+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  30%|##9       | 2.04M/6.83M [00:04<00:10, 498kB/s]
+[2023-03-20T09:17:33.942+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  31%|###1      | 2.12M/6.83M [00:04<00:08, 565kB/s]
+[2023-03-20T09:17:34.101+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  32%|###1      | 2.18M/6.83M [00:04<00:09, 512kB/s]
+[2023-03-20T09:17:34.211+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  33%|###2      | 2.24M/6.83M [00:04<00:09, 534kB/s]
+[2023-03-20T09:17:34.332+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  34%|###3      | 2.30M/6.83M [00:05<00:08, 536kB/s]
+[2023-03-20T09:17:34.434+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  35%|###4      | 2.36M/6.83M [00:05<00:08, 542kB/s]
+[2023-03-20T09:17:34.740+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  35%|###5      | 2.41M/6.83M [00:05<00:12, 357kB/s]
+[2023-03-20T09:17:34.841+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  37%|###7      | 2.54M/6.83M [00:05<00:08, 544kB/s]
+[2023-03-20T09:17:35.006+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  38%|###8      | 2.61M/6.83M [00:05<00:08, 513kB/s]
+[2023-03-20T09:17:35.108+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  39%|###9      | 2.69M/6.83M [00:05<00:07, 576kB/s]
+[2023-03-20T09:17:35.210+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  40%|####      | 2.76M/6.83M [00:05<00:06, 610kB/s]
+[2023-03-20T09:17:35.370+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  41%|####1     | 2.83M/6.83M [00:06<00:07, 558kB/s]
+[2023-03-20T09:17:35.475+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  43%|####2     | 2.92M/6.83M [00:06<00:06, 651kB/s]
+[2023-03-20T09:17:35.651+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  44%|####3     | 2.99M/6.83M [00:06<00:07, 565kB/s]
+[2023-03-20T09:17:36.228+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  45%|####4     | 3.05M/6.83M [00:06<00:14, 279kB/s]
+[2023-03-20T09:17:36.339+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  47%|####6     | 3.20M/6.83M [00:07<00:08, 435kB/s]
+[2023-03-20T09:17:36.538+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  48%|####7     | 3.27M/6.83M [00:07<00:08, 417kB/s]
+[2023-03-20T09:17:36.663+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  49%|####8     | 3.33M/6.83M [00:07<00:08, 438kB/s]
+[2023-03-20T09:17:36.764+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  50%|####9     | 3.41M/6.83M [00:07<00:07, 508kB/s]
+[2023-03-20T09:17:36.866+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  51%|#####1    | 3.49M/6.83M [00:07<00:05, 587kB/s]
+[2023-03-20T09:17:36.970+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  52%|#####2    | 3.56M/6.83M [00:07<00:05, 616kB/s]
+[2023-03-20T09:17:37.232+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  53%|#####3    | 3.63M/6.83M [00:07<00:07, 463kB/s]
+[2023-03-20T09:17:37.333+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  55%|#####5    | 3.77M/6.83M [00:08<00:04, 647kB/s]
+[2023-03-20T09:17:37.439+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  56%|#####6    | 3.85M/6.83M [00:08<00:04, 694kB/s]
+[2023-03-20T09:17:37.556+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  58%|#####7    | 3.94M/6.83M [00:08<00:04, 715kB/s]
+[2023-03-20T09:17:37.663+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  59%|#####9    | 4.05M/6.83M [00:08<00:03, 808kB/s]
+[2023-03-20T09:17:37.805+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  61%|######    | 4.13M/6.83M [00:08<00:03, 750kB/s]
+[2023-03-20T09:17:37.938+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  62%|######1   | 4.23M/6.83M [00:08<00:03, 748kB/s]
+[2023-03-20T09:17:38.053+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  63%|######3   | 4.32M/6.83M [00:08<00:03, 775kB/s]
+[2023-03-20T09:17:38.155+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  65%|######4   | 4.42M/6.83M [00:08<00:02, 847kB/s]
+[2023-03-20T09:17:38.321+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  66%|######6   | 4.51M/6.83M [00:09<00:03, 733kB/s]
+[2023-03-20T09:17:38.441+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  68%|######7   | 4.63M/6.83M [00:09<00:02, 834kB/s]
+[2023-03-20T09:17:38.897+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  69%|######9   | 4.72M/6.83M [00:09<00:04, 450kB/s]
+[2023-03-20T09:17:39.000+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  72%|#######1  | 4.91M/6.83M [00:09<00:02, 688kB/s]
+[2023-03-20T09:17:39.236+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  73%|#######3  | 5.01M/6.83M [00:09<00:03, 605kB/s]
+[2023-03-20T09:17:39.433+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  75%|#######4  | 5.09M/6.83M [00:10<00:03, 562kB/s]
+[2023-03-20T09:17:39.552+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  76%|#######6  | 5.21M/6.83M [00:10<00:02, 658kB/s]
+[2023-03-20T09:17:39.659+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  78%|#######7  | 5.30M/6.83M [00:10<00:02, 711kB/s]
+[2023-03-20T09:17:39.892+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  79%|#######8  | 5.39M/6.83M [00:10<00:02, 584kB/s]
+[2023-03-20T09:17:39.995+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  81%|########  | 5.51M/6.83M [00:10<00:01, 705kB/s]
+[2023-03-20T09:17:40.106+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  82%|########2 | 5.62M/6.83M [00:10<00:01, 782kB/s]
+[2023-03-20T09:17:40.214+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  84%|########3 | 5.73M/6.83M [00:10<00:01, 849kB/s]
+[2023-03-20T09:17:40.319+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  85%|########5 | 5.82M/6.83M [00:11<00:01, 872kB/s]
+[2023-03-20T09:17:40.526+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  87%|########6 | 5.91M/6.83M [00:11<00:01, 706kB/s]
+[2023-03-20T09:17:40.659+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  88%|########7 | 6.01M/6.83M [00:11<00:01, 716kB/s]
+[2023-03-20T09:17:40.764+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  89%|########9 | 6.09M/6.83M [00:11<00:01, 730kB/s]
+[2023-03-20T09:17:40.962+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  90%|######### | 6.16M/6.83M [00:11<00:01, 607kB/s]
+[2023-03-20T09:17:41.074+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  91%|#########1| 6.24M/6.83M [00:11<00:00, 636kB/s]
+[2023-03-20T09:17:41.199+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  92%|#########2| 6.31M/6.83M [00:11<00:00, 623kB/s]
+[2023-03-20T09:17:41.359+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  94%|#########4| 6.43M/6.83M [00:12<00:00, 673kB/s]
+[2023-03-20T09:17:41.617+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  95%|#########5| 6.50M/6.83M [00:12<00:00, 503kB/s]
+[2023-03-20T09:17:41.762+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  97%|#########6| 6.62M/6.83M [00:12<00:00, 593kB/s]
+[2023-03-20T09:17:41.871+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  98%|#########7| 6.68M/6.83M [00:12<00:00, 595kB/s]
+[2023-03-20T09:17:41.973+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading:  99%|#########8| 6.76M/6.83M [00:12<00:00, 641kB/s]
+[2023-03-20T09:17:42.029+0000] {logging_mixin.py:137} WARNING - [WDM] - Downloading: 100%|##########| 6.83M/6.83M [00:12<00:00, 560kB/s]
+[2023-03-20T09:17:42.202+0000] {logger.py:11} INFO - Driver has been saved in cache [/home/***/.wdm/drivers/chromedriver/linux64/111.0.5563]
+[2023-03-20T09:17:42.712+0000] {taskinstance.py:1775} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/DE_ETL.py", line 302, in crawl_then_load
+    df = crawl(fields=fields)
+  File "/opt/airflow/dags/DE_ETL.py", line 28, in crawl
+    driver = webdriver.Chrome(ChromeDriverManager().install())
+  File "/home/airflow/.local/lib/python3.7/site-packages/selenium/webdriver/chrome/webdriver.py", line 89, in __init__
+    keep_alive,
+  File "/home/airflow/.local/lib/python3.7/site-packages/selenium/webdriver/chromium/webdriver.py", line 101, in __init__
+    self.service.start()
+  File "/home/airflow/.local/lib/python3.7/site-packages/selenium/webdriver/common/service.py", line 104, in start
+    self.assert_process_still_running()
+  File "/home/airflow/.local/lib/python3.7/site-packages/selenium/webdriver/common/service.py", line 117, in assert_process_still_running
+    raise WebDriverException(f"Service {self.path} unexpectedly exited. Status code was: {return_code}")
+selenium.common.exceptions.WebDriverException: Message: Service /home/airflow/.wdm/drivers/chromedriver/linux64/111.0.5563/chromedriver unexpectedly exited. Status code was: 127
+
+[2023-03-20T09:17:42.731+0000] {taskinstance.py:1326} INFO - Marking task as UP_FOR_RETRY. dag_id=ETL_v01, task_id=crawl_data_then_load_to_datalake, execution_date=20230319T000000, start_date=20230320T091725, end_date=20230320T091742
+[2023-03-20T09:17:42.750+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 196 for task crawl_data_then_load_to_datalake (Message: Service /home/airflow/.wdm/drivers/chromedriver/linux64/111.0.5563/chromedriver unexpectedly exited. Status code was: 127
+; 951)
+[2023-03-20T09:17:42.790+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-03-20T09:17:42.809+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

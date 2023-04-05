@@ -1,0 +1,35 @@
+[2023-03-21T11:25:29.962+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_with_python_operator_v05.install_odbc_4 scheduled__2023-03-19T00:00:00+00:00 [queued]>
+[2023-03-21T11:25:29.986+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_with_python_operator_v05.install_odbc_4 scheduled__2023-03-19T00:00:00+00:00 [queued]>
+[2023-03-21T11:25:29.987+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-21T11:25:29.987+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 6
+[2023-03-21T11:25:29.988+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-21T11:25:30.055+0000] {taskinstance.py:1303} INFO - Executing <Task(BashOperator): install_odbc_4> on 2023-03-19 00:00:00+00:00
+[2023-03-21T11:25:30.063+0000] {standard_task_runner.py:55} INFO - Started process 7430 to run task
+[2023-03-21T11:25:30.069+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_with_python_operator_v05', 'install_odbc_4', 'scheduled__2023-03-19T00:00:00+00:00', '--job-id', '267', '--raw', '--subdir', 'DAGS_FOLDER/python_operator.py', '--cfg-path', '/tmp/tmp2x0efwvd']
+[2023-03-21T11:25:30.074+0000] {standard_task_runner.py:83} INFO - Job 267: Subtask install_odbc_4
+[2023-03-21T11:25:30.362+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_with_python_operator_v05.install_odbc_4 scheduled__2023-03-19T00:00:00+00:00 [running]> on host cfacfd39f993
+[2023-03-21T11:25:30.651+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Mr.Phi
+AIRFLOW_CTX_DAG_ID=dag_with_python_operator_v05
+AIRFLOW_CTX_TASK_ID=install_odbc_4
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-19T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-19T00:00:00+00:00
+[2023-03-21T11:25:30.654+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-03-21T11:25:30.657+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'ACCEPT_EULA=Y apt-get install -y msodbcsql17']
+[2023-03-21T11:25:30.696+0000] {subprocess.py:86} INFO - Output:
+[2023-03-21T11:25:30.723+0000] {subprocess.py:93} INFO - E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+[2023-03-21T11:25:30.724+0000] {subprocess.py:93} INFO - E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+[2023-03-21T11:25:30.724+0000] {subprocess.py:97} INFO - Command exited with return code 100
+[2023-03-21T11:25:30.749+0000] {taskinstance.py:1775} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 100.
+[2023-03-21T11:25:30.762+0000] {taskinstance.py:1326} INFO - Marking task as UP_FOR_RETRY. dag_id=dag_with_python_operator_v05, task_id=install_odbc_4, execution_date=20230319T000000, start_date=20230321T112529, end_date=20230321T112530
+[2023-03-21T11:25:30.799+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 267 for task install_odbc_4 (Bash command failed. The command returned a non-zero exit code 100.; 7430)
+[2023-03-21T11:25:30.849+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-03-21T11:25:30.909+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

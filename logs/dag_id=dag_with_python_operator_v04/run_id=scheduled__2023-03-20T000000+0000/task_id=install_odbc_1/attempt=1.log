@@ -1,0 +1,39 @@
+[2023-03-21T11:25:13.830+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_with_python_operator_v04.install_odbc_1 scheduled__2023-03-20T00:00:00+00:00 [queued]>
+[2023-03-21T11:25:13.854+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_with_python_operator_v04.install_odbc_1 scheduled__2023-03-20T00:00:00+00:00 [queued]>
+[2023-03-21T11:25:13.855+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-21T11:25:13.855+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 6
+[2023-03-21T11:25:13.856+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-21T11:25:13.899+0000] {taskinstance.py:1303} INFO - Executing <Task(BashOperator): install_odbc_1> on 2023-03-20 00:00:00+00:00
+[2023-03-21T11:25:13.908+0000] {standard_task_runner.py:55} INFO - Started process 7334 to run task
+[2023-03-21T11:25:13.922+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_with_python_operator_v04', 'install_odbc_1', 'scheduled__2023-03-20T00:00:00+00:00', '--job-id', '260', '--raw', '--subdir', 'DAGS_FOLDER/python_operator.py', '--cfg-path', '/tmp/tmpmc2tpe2m']
+[2023-03-21T11:25:13.935+0000] {standard_task_runner.py:83} INFO - Job 260: Subtask install_odbc_1
+[2023-03-21T11:25:14.194+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_with_python_operator_v04.install_odbc_1 scheduled__2023-03-20T00:00:00+00:00 [running]> on host cfacfd39f993
+[2023-03-21T11:25:14.434+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Mr.Phi
+AIRFLOW_CTX_DAG_ID=dag_with_python_operator_v04
+AIRFLOW_CTX_TASK_ID=install_odbc_1
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-20T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-20T00:00:00+00:00
+[2023-03-21T11:25:14.436+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-03-21T11:25:14.437+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -']
+[2023-03-21T11:25:14.452+0000] {subprocess.py:86} INFO - Output:
+[2023-03-21T11:25:14.474+0000] {subprocess.py:93} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2023-03-21T11:25:14.475+0000] {subprocess.py:93} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
+[2023-03-21T11:25:14.553+0000] {subprocess.py:93} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8)).
+[2023-03-21T11:25:14.556+0000] {subprocess.py:93} INFO - E: This command can only be used by root.
+[2023-03-21T11:25:15.882+0000] {subprocess.py:93} INFO -   0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100   983  100   983    0     0    698      0  0:00:01  0:00:01 --:--:--   698
+[2023-03-21T11:25:15.882+0000] {subprocess.py:93} INFO - (23) Failed writing body
+[2023-03-21T11:25:15.884+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2023-03-21T11:25:15.897+0000] {taskinstance.py:1775} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2023-03-21T11:25:15.903+0000] {taskinstance.py:1326} INFO - Marking task as UP_FOR_RETRY. dag_id=dag_with_python_operator_v04, task_id=install_odbc_1, execution_date=20230320T000000, start_date=20230321T112513, end_date=20230321T112515
+[2023-03-21T11:25:15.920+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 260 for task install_odbc_1 (Bash command failed. The command returned a non-zero exit code 1.; 7334)
+[2023-03-21T11:25:15.944+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-03-21T11:25:15.964+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check
